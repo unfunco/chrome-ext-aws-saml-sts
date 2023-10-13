@@ -1,0 +1,16 @@
+{
+  "author": {
+    "email": "daniel@honestempire.com",
+    "name": "Daniel Morris",
+    "url": "https://unfun.co"
+  },
+  "engines": {
+    "node": "20",
+    "npm": "9"
+  },
+  "homepage": "https://github.com/unfunco/chrome-ext-aws-saml-sts#readme",
+  "license": "Apache-2.0",
+  "name": "@unfunco/chrome-ext-aws-saml-sts",
+  "private": true,
+  "version": "0.1.0"
+}
