@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CodeSnippet copy confirmation is not shown by default 1`] = `
+<div
+  className="relative group border mb-2 "
+>
+  <pre
+    className="p-2 border bg-gray-100"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <code
+      className="font-mono"
+    >
+      const greeting = 'Hello, world!'
+    </code>
+  </pre>
+</div>
+`;
+
+exports[`CodeSnippet copy guidance is not shown by default 1`] = `
+<div
+  className="relative group border mb-2 "
+>
+  <pre
+    className="p-2 border bg-gray-100"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <code
+      className="font-mono"
+    >
+      const greeting = 'Hello, world!'
+    </code>
+  </pre>
+</div>
+`;
+
+exports[`CodeSnippet copy guidance is shown on hover 1`] = `
+<div
+  className="relative group border mb-2 "
+>
+  <pre
+    className="p-2 border bg-gray-100"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <code
+      className="font-mono"
+    >
+      const greeting = 'Hello, world!'
+    </code>
+  </pre>
+</div>
+`;
+
+exports[`CodeSnippet copy guidance is shown on hover 2`] = `
+<div
+  className="relative group border mb-2 cursor-pointer"
+>
+  <pre
+    className="p-2 border bg-gray-100"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <code
+      className="font-mono"
+    >
+      const greeting = 'Hello, world!'
+    </code>
+  </pre>
+  <div
+    className="absolute flex items-center justify-center pointer-events-none h-full top-0 left font-bold bg-black text-white opacity-75 w-full text-base"
+  >
+    Click to copy
+  </div>
+</div>
+`;
