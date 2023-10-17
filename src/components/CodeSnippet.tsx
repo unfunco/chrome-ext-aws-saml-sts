@@ -20,21 +20,26 @@ const CodeSnippet = ({ code }: CodeSnippetProps): React.ReactElement => {
   }
 
   return (
-    <div className={`relative group border mb-2 ${hovering ? 'cursor-pointer' : ''}`}>
-      <pre className={`p-2 border bg-gray-100`}
-           onClick={copyToClipboard}
-           onMouseEnter={() => setHovering(true)}
-           onMouseLeave={() => setHovering(false)}
-      >
+    <div
+      className={`relative group border mb-2 ${
+        hovering ? 'cursor-pointer' : ''
+      }`}>
+      <pre
+        className={`p-2 border bg-gray-100`}
+        onClick={copyToClipboard}
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}>
         <code className={`font-mono`}>{code}</code>
       </pre>
       {hovering && (
-        <div className={`absolute flex items-center justify-center pointer-events-none h-full top-0 left font-bold bg-black text-white opacity-75 w-full text-base`}>
+        <div
+          className={`absolute flex items-center justify-center pointer-events-none h-full top-0 left font-bold bg-black text-white opacity-75 w-full text-base`}>
           Click to copy
         </div>
       )}
       {copied && (
-        <div className={`absolute flex items-center justify-center pointer-events-none h-full top-0 left-1/2 font-bold text-base transform -translate-x-1/2 opacity-90 bg-green-600 text-white w-full`}>
+        <div
+          className={`absolute flex items-center justify-center pointer-events-none h-full top-0 left-1/2 font-bold text-base transform -translate-x-1/2 opacity-90 bg-green-600 text-white w-full`}>
           Copied to clipboard!
         </div>
       )}

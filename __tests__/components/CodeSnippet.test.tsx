@@ -17,13 +17,13 @@ describe('CodeSnippet', (): void => {
 
   describe('copy guidance', (): void => {
     it('is not shown by default', (): void => {
-      const component = create(<CodeSnippet code={code}/>)
-      let tree = component.toJSON() as ReactTestRendererJSON
+      const component = create(<CodeSnippet code={code} />)
+      const tree = component.toJSON() as ReactTestRendererJSON
       expect(tree).toMatchSnapshot()
     })
 
     it('is shown on hover', (): void => {
-      const component = create(<CodeSnippet code={code}/>)
+      const component = create(<CodeSnippet code={code} />)
       let tree = component.toJSON() as ReactTestRendererJSON
       expect(tree).toMatchSnapshot()
 
@@ -39,8 +39,8 @@ describe('CodeSnippet', (): void => {
 
   describe('copy confirmation', (): void => {
     it('is not shown by default', (): void => {
-      const component = create(<CodeSnippet code={code}/>)
-      let tree = component.toJSON() as ReactTestRendererJSON
+      const component = create(<CodeSnippet code={code} />)
+      const tree = component.toJSON() as ReactTestRendererJSON
       expect(tree).toMatchSnapshot()
     })
   })
