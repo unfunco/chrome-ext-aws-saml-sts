@@ -9,4 +9,4 @@ if (container === null) {
 }
 
 const root = createRoot(container)
-root.render(<Popup/>)
+root.render(<Popup />)

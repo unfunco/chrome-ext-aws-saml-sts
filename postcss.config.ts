@@ -3,8 +3,5 @@ import tailwind from 'tailwindcss'
 
 // noinspection JSUnusedGlobalSymbols
 export default {
-  plugins: [
-    autoprefixer,
-    tailwind,
-  ],
+  plugins: [autoprefixer, tailwind],
 }

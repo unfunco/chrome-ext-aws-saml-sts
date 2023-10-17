@@ -15,8 +15,8 @@ aws_session_token=...
 const Popup = (): React.ReactElement => {
   return (
     <div id={`popup`} className={`bg-gray-100 p-2`}>
-      <CodeSnippet code={sampleExports}/>
-      <CodeSnippet code={sampleIni}/>
+      <CodeSnippet code={sampleExports} />
+      <CodeSnippet code={sampleIni} />
     </div>
   )
 }
