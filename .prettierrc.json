@@ -6,6 +6,7 @@
   "endOfLine": "lf",
   "htmlWhitespaceSensitivity": "css",
   "jsxSingleQuote": false,
+  "plugins": ["prettier-plugin-tailwindcss"],
   "printWidth": 80,
   "proseWrap": "preserve",
   "quoteProps": "as-needed",

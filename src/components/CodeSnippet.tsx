@@ -21,11 +21,11 @@ const CodeSnippet = ({ code }: CodeSnippetProps): React.ReactElement => {
 
   return (
     <div
-      className={`relative group border mb-2 ${
+      className={`group relative mb-2 border ${
         hovering ? 'cursor-pointer' : ''
       }`}>
       <pre
-        className={`p-2 border bg-gray-100`}
+        className={`overflow-x-scroll border bg-gray-100 p-2`}
         onClick={copyToClipboard}
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}>
@@ -33,13 +33,13 @@ const CodeSnippet = ({ code }: CodeSnippetProps): React.ReactElement => {
       </pre>
       {hovering && (
         <div
-          className={`absolute flex items-center justify-center pointer-events-none h-full top-0 left font-bold bg-black text-white opacity-75 w-full text-base`}>
+          className={`left pointer-events-none absolute top-0 flex h-full w-full items-center justify-center bg-black text-base font-bold text-white opacity-75`}>
           Click to copy
         </div>
       )}
       {copied && (
         <div
-          className={`absolute flex items-center justify-center pointer-events-none h-full top-0 left-1/2 font-bold text-base transform -translate-x-1/2 opacity-90 bg-green-600 text-white w-full`}>
+          className={`pointer-events-none absolute left-1/2 top-0 flex h-full w-full -translate-x-1/2 transform items-center justify-center bg-green-600 text-base font-bold text-white opacity-90`}>
           Copied to clipboard!
         </div>
       )}
