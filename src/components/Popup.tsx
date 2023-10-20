@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import CodeSnippet from '@/components/CodeSnippet'
 import {
-  type Credentials,
-  iniCredentials,
-  powershellCredentials,
-  unixCredentials,
-  windowsCredentials,
+  type AWSCredentials,
+  iniSnippet,
+  powershellSnippet,
+  unixSnippet,
+  windowsSnippet,
 } from '@/utilities'
 
 type Platform = {
@@ -13,7 +13,7 @@ type Platform = {
   name: string
 }
 
-const credentials: Credentials = {
+const credentials: AWSCredentials = {
   AWS_ACCESS_KEY_ID: 'ASIA1234567890123456',
   AWS_SECRET_ACCESS_KEY: '1234567890123456789012345678901234567890',
   AWS_SESSION_TOKEN: '1234567890abcdefghijklmnopqrstuvwxyz1234567890',
@@ -27,7 +27,7 @@ const Popup = (): React.ReactElement => {
   const [platforms, setPlatforms] = useState([
     { name: 'macOS and Linux', current: true },
     { name: 'Windows', current: false },
-    { name: 'Powershell', current: false },
+    { name: 'PowerShell', current: false },
   ])
 
   const [activeTab, setActiveTab] = useState(
@@ -72,19 +72,41 @@ const Popup = (): React.ReactElement => {
           </a>
         ))}
       </nav>
-      <div>
+      <div className={`text-xs`}>
         {activeTab === 'macOS and Linux' && (
-          <CodeSnippet code={unixCredentials(credentials)} />
+          <>
+            <p className={`mb-2 p-1`}>
+              <strong>Option 1: </strong>
+              Run the following commands in your terminal.
+            </p>
+            <CodeSnippet code={unixSnippet(credentials)} />
+          </>
         )}
         {activeTab === 'Windows' && (
-          <CodeSnippet code={windowsCredentials(credentials)} />
+          <>
+            <p className={`mb-2 p-1`}>
+              <strong>Option 1: </strong>
+              Run the following commands in your terminal.
+            </p>
+            <CodeSnippet code={windowsSnippet(credentials)} />
+          </>
         )}
-        {activeTab === 'Powershell' && (
-          <CodeSnippet code={powershellCredentials(credentials)} />
+        {activeTab === 'PowerShell' && (
+          <>
+            <p className={`mb-2 p-1`}>
+              <strong>Option 1: </strong>
+              Paste the following text into PowerShell.
+            </p>
+            <CodeSnippet code={powershellSnippet(credentials)} />
+          </>
         )}
       </div>
-      <div>
-        <CodeSnippet code={iniCredentials(credentials)} />
+      <div className={`text-xs`}>
+        <p className={`mb-2 p-1`}>
+          <strong>Option 2: </strong>
+          Paste the following text into your AWS credentials file.
+        </p>
+        <CodeSnippet code={iniSnippet(credentials)} />
       </div>
     </div>
   )
