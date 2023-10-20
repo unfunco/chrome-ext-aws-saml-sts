@@ -2,10 +2,10 @@
 
 exports[`CodeSnippet copy confirmation is not shown by default 1`] = `
 <div
-  className="relative group border mb-2 "
+  className="group relative mb-2 border "
 >
   <pre
-    className="p-2 border bg-gray-100"
+    className="overflow-x-scroll border bg-gray-100 p-2"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -21,10 +21,10 @@ exports[`CodeSnippet copy confirmation is not shown by default 1`] = `
 
 exports[`CodeSnippet copy guidance is not shown by default 1`] = `
 <div
-  className="relative group border mb-2 "
+  className="group relative mb-2 border "
 >
   <pre
-    className="p-2 border bg-gray-100"
+    className="overflow-x-scroll border bg-gray-100 p-2"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -40,10 +40,10 @@ exports[`CodeSnippet copy guidance is not shown by default 1`] = `
 
 exports[`CodeSnippet copy guidance is shown on hover 1`] = `
 <div
-  className="relative group border mb-2 "
+  className="group relative mb-2 border "
 >
   <pre
-    className="p-2 border bg-gray-100"
+    className="overflow-x-scroll border bg-gray-100 p-2"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -59,10 +59,10 @@ exports[`CodeSnippet copy guidance is shown on hover 1`] = `
 
 exports[`CodeSnippet copy guidance is shown on hover 2`] = `
 <div
-  className="relative group border mb-2 cursor-pointer"
+  className="group relative mb-2 border cursor-pointer"
 >
   <pre
-    className="p-2 border bg-gray-100"
+    className="overflow-x-scroll border bg-gray-100 p-2"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -74,7 +74,7 @@ exports[`CodeSnippet copy guidance is shown on hover 2`] = `
     </code>
   </pre>
   <div
-    className="absolute flex items-center justify-center pointer-events-none h-full top-0 left font-bold bg-black text-white opacity-75 w-full text-base"
+    className="left pointer-events-none absolute top-0 flex h-full w-full items-center justify-center bg-black text-base font-bold text-white opacity-75"
   >
     Click to copy
   </div>
