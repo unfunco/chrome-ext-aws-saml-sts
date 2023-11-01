@@ -7,16 +7,11 @@ import {
   unixSnippet,
   windowsSnippet,
 } from '@/utilities'
+import Browser from 'webextension-polyfill'
 
 type Platform = {
   current: boolean
   name: string
-}
-
-const credentials: AWSCredentials = {
-  AWS_ACCESS_KEY_ID: 'ASIA1234567890123456',
-  AWS_SECRET_ACCESS_KEY: '1234567890123456789012345678901234567890',
-  AWS_SESSION_TOKEN: '1234567890abcdefghijklmnopqrstuvwxyz1234567890',
 }
 
 function classNames(...classes: string[]): string {
@@ -24,35 +19,47 @@ function classNames(...classes: string[]): string {
 }
 
 const Popup = (): React.ReactElement => {
-  const [platforms, setPlatforms] = useState([
+  const [credentials, setCredentials] = useState<AWSCredentials>({
+    AWS_ACCESS_KEY_ID: '',
+    AWS_SECRET_ACCESS_KEY: '',
+    AWS_SESSION_TOKEN: '',
+  })
+
+  const [platforms, setPlatforms] = useState<Platform[]>([
     { name: 'macOS and Linux', current: true },
     { name: 'Windows', current: false },
     { name: 'PowerShell', current: false },
   ])
 
-  const [activeTab, setActiveTab] = useState(
-    platforms.find((p) => p.current)!.name,
+  const [activeTab, setActiveTab] = useState<string>(
+    platforms.find((p) => p.current)?.name ?? 'macOS and Linux',
   )
 
   useEffect((): void => {
-    const platform = localStorage.getItem('platform')
-    if (platform) {
-      handleTabChange(platform)
-    }
+    Browser.storage.local.get('credentials').then((current): void => {
+      setCredentials(current.credentials)
+    })
+
+    Browser.storage.local.get('platform').then((current): void => {
+      handleTabChange(current.platform)
+    })
   }, [])
 
   const handleTabChange = (platform: string): void => {
-    localStorage.setItem('platform', platform)
-    setActiveTab(platform)
-    setPlatforms(
-      platforms.map(
-        (p): Platform => ({
-          ...p,
-          current: p.name === platform,
-        }),
-      ),
-    )
+    Browser.storage.local.set({ platform }).then((): void => {
+      setActiveTab(platform)
+      setPlatforms(
+        platforms.map(
+          (p): Platform => ({
+            ...p,
+            current: p.name === platform,
+          }),
+        ),
+      )
+    })
   }
+
+  const ready = typeof credentials?.AWS_ACCESS_KEY_ID !== 'undefined'
 
   return (
     <div id={`popup`} className={`bg-gray-100 p-2`}>
@@ -61,7 +68,7 @@ const Popup = (): React.ReactElement => {
           <a
             className={classNames(
               platform.current
-                ? 'bg-indigo-100 text-indigo-700'
+                ? 'bg-gray-200 text-gray-900'
                 : 'text-gray-500 hover:text-gray-700',
               'rounded-md px-3 py-2 text-sm font-medium',
             )}
@@ -79,7 +86,7 @@ const Popup = (): React.ReactElement => {
               <strong>Option 1: </strong>
               Run the following commands in your terminal.
             </p>
-            <CodeSnippet code={unixSnippet(credentials)} />
+            <CodeSnippet code={unixSnippet(credentials)} ready={ready} />
           </>
         )}
         {activeTab === 'Windows' && (
@@ -88,7 +95,7 @@ const Popup = (): React.ReactElement => {
               <strong>Option 1: </strong>
               Run the following commands in your terminal.
             </p>
-            <CodeSnippet code={windowsSnippet(credentials)} />
+            <CodeSnippet code={windowsSnippet(credentials)} ready={ready} />
           </>
         )}
         {activeTab === 'PowerShell' && (
@@ -97,7 +104,7 @@ const Popup = (): React.ReactElement => {
               <strong>Option 1: </strong>
               Paste the following text into PowerShell.
             </p>
-            <CodeSnippet code={powershellSnippet(credentials)} />
+            <CodeSnippet code={powershellSnippet(credentials)} ready={ready} />
           </>
         )}
       </div>
@@ -106,7 +113,7 @@ const Popup = (): React.ReactElement => {
           <strong>Option 2: </strong>
           Paste the following text into your AWS credentials file.
         </p>
-        <CodeSnippet code={iniSnippet(credentials)} />
+        <CodeSnippet code={iniSnippet(credentials)} ready={ready} />
       </div>
     </div>
   )

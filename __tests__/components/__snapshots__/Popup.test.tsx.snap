@@ -9,7 +9,7 @@ exports[`Popup platform is configured to display macOS and Linux by default 1`] 
     className="mb-2 flex space-x-4"
   >
     <a
-      className="bg-indigo-100 text-indigo-700 rounded-md px-3 py-2 text-sm font-medium"
+      className="bg-gray-200 text-gray-900 rounded-md px-3 py-2 text-sm font-medium"
       href="#"
       onClick={[Function]}
     >
@@ -53,9 +53,9 @@ exports[`Popup platform is configured to display macOS and Linux by default 1`] 
         <code
           className="font-mono"
         >
-          export AWS_ACCESS_KEY_ID="ASIA1234567890123456"
-export AWS_SECRET_ACCESS_KEY="1234567890123456789012345678901234567890"
-export AWS_SESSION_TOKEN="1234567890abcdefghijklmnopqrstuvwxyz1234567890"
+          export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_ACCESS_KEY=""
+export AWS_SESSION_TOKEN=""
         </code>
       </pre>
     </div>
@@ -84,9 +84,9 @@ export AWS_SESSION_TOKEN="1234567890abcdefghijklmnopqrstuvwxyz1234567890"
           className="font-mono"
         >
           [default]
-aws_access_key_id = ASIA1234567890123456
-aws_secret_access_key = 1234567890123456789012345678901234567890
-aws_session_token = 1234567890abcdefghijklmnopqrstuvwxyz1234567890
+aws_access_key_id = 
+aws_secret_access_key = 
+aws_session_token = 
         </code>
       </pre>
     </div>

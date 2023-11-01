@@ -7,7 +7,7 @@ import {
 } from '@/utilities'
 
 describe('Utilities', (): void => {
-  describe('templates', (): void => {
+  describe('snippets', (): void => {
     const creds: AWSCredentials = {
       AWS_ACCESS_KEY_ID: '<access_key_id>',
       AWS_SECRET_ACCESS_KEY: '<secret_access_key>',
