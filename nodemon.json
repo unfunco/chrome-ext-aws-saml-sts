@@ -1,0 +1,5 @@
+{
+  "exec": "vite build",
+  "ext": "css,html,ts,tsx",
+  "watch": ["src", "vite.config.ts"]
+}
