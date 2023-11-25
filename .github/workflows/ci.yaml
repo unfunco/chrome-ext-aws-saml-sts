@@ -65,9 +65,17 @@ jobs:
       with:
         bump-minor-pre-major: true # TODO(unfunco): Remove before v1.0.0.
         changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
+        labels: |
+          automata 🤖
+          autorelease: pending
+          chore 🧹
         package-name: '@unfunco/chrome-ext-aws-saml-sts'
         prerelease: true # TODO(unfunco): Remove before v1.0.0.
         pull-request-header: ':robot: I have created a release'
-        pull-request-title-pattern: 'chore: Release v${version}'
+        pull-request-title-pattern: 'chore: Release extension v${version}'
         release-as: v0.1.0 # TODO(unfunco): Remove after the first release is merged.
+        release-labels: |
+          automata 🤖
+          autorelease: tagged
+          chore 🧹
         release-type: node
