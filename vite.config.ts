@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react-swc'
 import postcssConfig from './postcss.config'
 import { crx, ManifestV3Export } from '@crxjs/vite-plugin'
 import manifest from './src/manifest'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 const SRC = resolve(__dirname, 'src')
 
@@ -31,7 +32,13 @@ export default defineConfig({
   css: {
     postcss: postcssConfig,
   },
-  plugins: [react(), crx({ manifest: manifest as ManifestV3Export })],
+  plugins: [
+    react(),
+    crx({ manifest: manifest as ManifestV3Export }),
+    viteStaticCopy({
+      targets: [{ src: 'src/_locales/*', dest: '_locales' }],
+    }),
+  ],
   publicDir: resolve(__dirname, 'public'),
   resolve: {
     alias: {

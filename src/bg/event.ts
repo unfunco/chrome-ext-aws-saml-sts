@@ -1,6 +1,7 @@
 import { WebRequest } from 'webextension-polyfill'
 import { XMLParser } from 'fast-xml-parser'
 import { AssumeRoleWithSAMLCommandOutput, STS } from '@aws-sdk/client-sts'
+import { saveCredentials } from '@/utilities/storage'
 
 const sts = new STS({
   // Region is required, but it's not used.
@@ -60,7 +61,7 @@ export const onBeforeRequestEvent = (
   let role = null
   if (roles.length > 0 && !!roleIndex) {
     for (let i = 0; i < roles.length; i++) {
-      if (roles[i]['#text'].indexOf(roleIndex) === -1) {
+      if (roles[i]['#text'].indexOf(roleIndex) > -1) {
         role = roles[i]['#text']
         break
       }
@@ -82,8 +83,15 @@ export const onBeforeRequestEvent = (
     })
     .then(
       (data: AssumeRoleWithSAMLCommandOutput): void => {
-        if (data !== void 0) {
-          console.log(data)
+        if (data !== void 0 && data.AssumedRoleUser && data.Credentials) {
+          saveCredentials({
+            AWS_ACCESS_KEY_ID: data.Credentials.AccessKeyId!,
+            AWS_SECRET_ACCESS_KEY: data.Credentials.SecretAccessKey!,
+            AWS_SESSION_TOKEN: data.Credentials.SessionToken!,
+          }).then(
+            (): void => console.debug('Credentials saved.'),
+            console.error,
+          )
         }
       },
       (error: unknown): void => {

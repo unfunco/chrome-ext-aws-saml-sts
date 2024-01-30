@@ -5,6 +5,7 @@
 *.seed
 *.tgz
 *.tsbuildinfo
+*.zip
 .env
 .env.development.local
 .env.local

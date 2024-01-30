@@ -4,7 +4,6 @@ body {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  height: 292px;
   position: relative;
   width: 400px;
 }

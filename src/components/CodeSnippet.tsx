@@ -3,9 +3,10 @@ import { useState } from 'react'
 
 type CodeSnippetProps = {
   code: string
+  ready: boolean
 }
 
-const CodeSnippet = ({ code }: CodeSnippetProps): React.ReactElement => {
+const CodeSnippet = ({ code, ready }: CodeSnippetProps): React.ReactElement => {
   const [copied, setCopied] = useState(false)
   const [hovering, setHovering] = useState(false)
 
@@ -22,22 +23,27 @@ const CodeSnippet = ({ code }: CodeSnippetProps): React.ReactElement => {
   return (
     <div
       className={`group relative mb-2 border ${
-        hovering ? 'cursor-pointer' : ''
+        ready && hovering ? 'cursor-pointer' : ''
       }`}>
       <pre
         className={`overflow-x-scroll border bg-gray-100 p-2`}
         onClick={copyToClipboard}
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}>
-        <code className={`font-mono`}>{code}</code>
+        {ready && <code className={`font-mono`}>{code}</code>}
+        {!ready && (
+          <span className={'font-sans text-gray-500'}>
+            Waiting for credentials...
+          </span>
+        )}
       </pre>
-      {hovering && (
+      {ready && hovering && (
         <div
           className={`left pointer-events-none absolute top-0 flex h-full w-full items-center justify-center bg-black text-base font-bold text-white opacity-75`}>
           Click to copy
         </div>
       )}
-      {copied && (
+      {ready && copied && (
         <div
           className={`pointer-events-none absolute left-1/2 top-0 flex h-full w-full -translate-x-1/2 transform items-center justify-center bg-green-600 text-base font-bold text-white opacity-90`}>
           Copied to clipboard!
