@@ -52,8 +52,8 @@ jobs:
     - name: Build Chrome extension
       run: npm run build
 
-  prepare_release:
-    name: Prepare release
+  release:
+    name: Release?
     needs: [ build ]
     permissions:
       contents: write
@@ -61,21 +61,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Prepare a release
-      uses: google-github-actions/release-please-action@v3
+      uses: google-github-actions/release-please-action@v4
       with:
-        bump-minor-pre-major: true # TODO(unfunco): Remove before v1.0.0.
-        changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
-        labels: |
-          automata 🤖
-          autorelease: pending
-          chore 🧹
-        package-name: '@unfunco/chrome-ext-aws-saml-sts'
-        prerelease: true # TODO(unfunco): Remove before v1.0.0.
-        pull-request-header: ':robot: I have created a release'
-        pull-request-title-pattern: 'chore: Release extension v${version}'
-        release-as: v0.1.0 # TODO(unfunco): Remove after the first release is merged.
-        release-labels: |
-          automata 🤖
-          autorelease: tagged
-          chore 🧹
-        release-type: node
+        config-file: .github/release-please-config.json
+        manifest-file: .github/release-please-manifest.json
+        token: ${{ secrets.GITHUB_TOKEN }}
