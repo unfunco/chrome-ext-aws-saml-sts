@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Apply context labels
-      uses: actions/labeler@v4
+      uses: actions/labeler@v5
       with:
         configuration-path: .github/labeler.yaml
         sync-labels: true
