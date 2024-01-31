@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.2.0](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.1.0...chrome-ext-aws-saml-sts-v0.2.0) (2024-01-31)
+
+
+### New features
+
+* Add an initial icon set ([#16](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/16)) ([43bdda4](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/43bdda4847e81d1f01f87f72c83db348c22d9adc))
+* Automatically remove expired credentials ([#17](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/17)) ([c88a0d3](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/c88a0d3472ff0628fc4dd827d3d4471339425ca5))
+
+
+### Miscellaneous
+
+* Bump actions/github-script from 6 to 7 ([#13](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/13)) ([1234d4e](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/1234d4e981b1ea5d47ecb75fd697b88869a59cb2))
+* Bump actions/labeler from 4 to 5 ([#12](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/12)) ([f944581](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/f94458115272d5e06d7abecbc8fb6e16eb7fb763))
+* Bump vite from 5.0.2 to 5.0.12 ([#15](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/15)) ([f1c2314](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/f1c2314f5aae0d7a4d6b3f195a07c0c0e3037fe9))
+* Configure Dependabot and upgrade Actions ([#11](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/11)) ([10b0035](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/10b003516689af97e5291c9228662558ed91aa34))
+
 ## 0.1.0 (2024-01-30)
 
 
