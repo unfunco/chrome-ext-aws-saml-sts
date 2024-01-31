@@ -45,7 +45,7 @@ exports[`Popup platform is configured to display macOS and Linux by default 1`] 
       className="group relative mb-2 border "
     >
       <pre
-        className="overflow-x-scroll border bg-gray-100 p-2"
+        className="overflow-x-scroll border bg-gray-100 p-2 leading-5"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -75,7 +75,7 @@ export AWS_SESSION_TOKEN=""
       className="group relative mb-2 border "
     >
       <pre
-        className="overflow-x-scroll border bg-gray-100 p-2"
+        className="overflow-x-scroll border bg-gray-100 p-2 leading-5"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
