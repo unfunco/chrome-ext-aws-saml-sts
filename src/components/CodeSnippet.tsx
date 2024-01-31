@@ -26,7 +26,7 @@ const CodeSnippet = ({ code, ready }: CodeSnippetProps): React.ReactElement => {
         ready && hovering ? 'cursor-pointer' : ''
       }`}>
       <pre
-        className={`overflow-x-scroll border bg-gray-100 p-2`}
+        className={`overflow-x-scroll border bg-gray-100 p-2 leading-5`}
         onClick={copyToClipboard}
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}>

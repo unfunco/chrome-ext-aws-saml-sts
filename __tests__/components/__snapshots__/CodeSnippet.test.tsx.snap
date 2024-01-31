@@ -5,7 +5,7 @@ exports[`CodeSnippet copy confirmation is not shown by default 1`] = `
   className="group relative mb-2 border "
 >
   <pre
-    className="overflow-x-scroll border bg-gray-100 p-2"
+    className="overflow-x-scroll border bg-gray-100 p-2 leading-5"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -24,7 +24,7 @@ exports[`CodeSnippet copy guidance is not shown by default 1`] = `
   className="group relative mb-2 border "
 >
   <pre
-    className="overflow-x-scroll border bg-gray-100 p-2"
+    className="overflow-x-scroll border bg-gray-100 p-2 leading-5"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -43,7 +43,7 @@ exports[`CodeSnippet copy guidance is shown on hover 1`] = `
   className="group relative mb-2 border "
 >
   <pre
-    className="overflow-x-scroll border bg-gray-100 p-2"
+    className="overflow-x-scroll border bg-gray-100 p-2 leading-5"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -62,7 +62,7 @@ exports[`CodeSnippet copy guidance is shown on hover 2`] = `
   className="group relative mb-2 border cursor-pointer"
 >
   <pre
-    className="overflow-x-scroll border bg-gray-100 p-2"
+    className="overflow-x-scroll border bg-gray-100 p-2 leading-5"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
