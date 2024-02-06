@@ -9,12 +9,12 @@
     "moduleResolution": "node",
     "noEmit": true,
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": ["src/*"]
     },
     "resolveJsonModule": true,
     "strict": true,
-    "types": ["chrome", "jest", "node", "vite/client"],
+    "types": ["chrome", "jest", "node", "vite/client"]
   },
   "exclude": ["node_modules"],
-  "include": ["src", "vite.config.ts"],
+  "include": ["src", "vite.config.ts"]
 }
