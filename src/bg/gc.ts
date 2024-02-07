@@ -4,11 +4,11 @@ import { AWSCredentials } from '@/utilities'
 const DEFAULT_GC_INTERVAL = 30_000
 
 export const gc = async (ms?: number): Promise<NodeJS.Timeout> => {
-  const credentials = (await Browser.storage.local.get(
-    'credentials',
-  )) as AWSCredentials
+  const stored = (await Browser.storage.local.get('credentials')) as {
+    credentials: AWSCredentials
+  }
 
-  if (credentials.__expires_at < Date.now()) {
+  if (stored.credentials._expiry < Date.now()) {
     await Browser.storage.local.remove('credentials')
   }
 
