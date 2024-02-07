@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.2.1](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.2.0...chrome-ext-aws-saml-sts-v0.2.1) (2024-02-07)
+
+
+### Bug fixes
+
+* Fix the removal of expired credentials ([#27](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/27)) ([e2dc349](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/e2dc3492fbc9df3c9c543063852f107b9fea7f49))
+
+
+### Miscellaneous
+
+* Add a screenshot to the README ([#18](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/18)) ([1b777bd](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/1b777bd19f9a8a045ad35664c2f908f874887411))
+* Add badges to the README ([#28](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/28)) ([b837fdf](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/b837fdfcf73a3481c30d9ab4bbef2bc4d20df99f))
+* Add pre-commit linting checks ([#29](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/29)) ([23bbf14](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/23bbf14f399635b0330a1ef75b74e9915856aaf7))
+* Attach packaged extensions to releases ([#26](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/26)) ([3f6d197](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/3f6d197d9ef93c3a74ee68a8002e9e2cadbbaf4e))
+* Bump @aws-sdk/client-sts from 3.502.0 to 3.504.0 ([#21](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/21)) ([b6424b7](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/b6424b776420f44b3c2f49469d6dd99ef4168348))
+* Bump @types/node from 20.11.10 to 20.11.16 ([#20](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/20)) ([e8dfa09](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/e8dfa0936ca9f0ace240cbfb7481cc92af6aeb45))
+* Bump @types/react from 18.2.48 to 18.2.52 ([#19](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/19)) ([431b564](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/431b564ff02a70e3363ff9a7371ca40b10517f91))
+* Bump @vitejs/plugin-react-swc from 3.5.0 to 3.6.0 ([#22](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/22)) ([8dc771d](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/8dc771df496a1d310878525e9d148edfcb7beb5a))
+* Bump fast-xml-parser from 4.3.3 to 4.3.4 ([#23](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/23)) ([b11f1cb](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/b11f1cb84e8ca46ac9f5eb9e3fb7ba5137e9ae28))
+* Bump prettier from 3.2.4 to 3.2.5 ([#24](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/24)) ([838444c](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/838444c4d2a1cd8aefd2137c0f7bda07e903c94e))
+
 ## [0.2.0](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.1.0...chrome-ext-aws-saml-sts-v0.2.0) (2024-01-31)
 
 
