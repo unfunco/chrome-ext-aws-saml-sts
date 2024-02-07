@@ -2,28 +2,28 @@
 
 exports[`Popup platform is configured to display macOS and Linux by default 1`] = `
 <div
-  className="bg-gray-100 p-2"
+  className="bg-gray-100 p-2 dark:bg-gray-900"
   id="popup"
 >
   <nav
     className="mb-2 flex space-x-4"
   >
     <a
-      className="bg-gray-200 text-gray-900 rounded-md px-3 py-2 text-sm font-medium"
+      className="bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-md px-3 py-2 text-sm font-medium"
       href="#"
       onClick={[Function]}
     >
       macOS and Linux
     </a>
     <a
-      className="text-gray-500 hover:text-gray-700 rounded-md px-3 py-2 text-sm font-medium"
+      className="text-gray-500 hover:bg-gray-800 hover:text-gray-300 rounded-md px-3 py-2 text-sm font-medium"
       href="#"
       onClick={[Function]}
     >
       Windows
     </a>
     <a
-      className="text-gray-500 hover:text-gray-700 rounded-md px-3 py-2 text-sm font-medium"
+      className="text-gray-500 hover:bg-gray-800 hover:text-gray-300 rounded-md px-3 py-2 text-sm font-medium"
       href="#"
       onClick={[Function]}
     >
@@ -31,7 +31,7 @@ exports[`Popup platform is configured to display macOS and Linux by default 1`] 
     </a>
   </nav>
   <div
-    className="text-xs"
+    className="text-xs text-gray-700 dark:text-gray-300"
   >
     <p
       className="mb-2 p-1"
@@ -42,10 +42,10 @@ exports[`Popup platform is configured to display macOS and Linux by default 1`] 
       Run the following commands in your terminal.
     </p>
     <div
-      className="group relative mb-2 border "
+      className="group relative mb-2 "
     >
       <pre
-        className="overflow-x-scroll border bg-gray-100 p-2 leading-5"
+        className="relative overflow-x-scroll rounded-md border border-gray-300 bg-gray-200 p-2 leading-5 dark:border-gray-700 dark:bg-gray-800"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -61,7 +61,7 @@ export AWS_SESSION_TOKEN=""
     </div>
   </div>
   <div
-    className="text-xs"
+    className="text-xs text-gray-700 dark:text-gray-300"
   >
     <p
       className="mb-2 p-1"
@@ -72,10 +72,10 @@ export AWS_SESSION_TOKEN=""
       Paste the following text into your AWS credentials file.
     </p>
     <div
-      className="group relative mb-2 border "
+      className="group relative mb-2 "
     >
       <pre
-        className="overflow-x-scroll border bg-gray-100 p-2 leading-5"
+        className="relative overflow-x-scroll rounded-md border border-gray-300 bg-gray-200 p-2 leading-5 dark:border-gray-700 dark:bg-gray-800"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}

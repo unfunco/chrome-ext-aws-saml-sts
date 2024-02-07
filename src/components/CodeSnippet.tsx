@@ -22,30 +22,30 @@ const CodeSnippet = ({ code, ready }: CodeSnippetProps): React.ReactElement => {
 
   return (
     <div
-      className={`group relative mb-2 border ${
+      className={`group relative mb-2 ${
         ready && hovering ? 'cursor-pointer' : ''
       }`}>
       <pre
-        className={`overflow-x-scroll border bg-gray-100 p-2 leading-5`}
+        className={`relative overflow-x-scroll rounded-md border border-gray-300 bg-gray-200 p-2 leading-5 dark:border-gray-700 dark:bg-gray-800`}
         onClick={copyToClipboard}
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}>
         {ready && <code className={`font-mono`}>{code}</code>}
         {!ready && (
-          <span className={'font-sans text-gray-500'}>
+          <span className={'font-sans text-gray-500 dark:text-gray-300'}>
             Waiting for credentials...
           </span>
         )}
       </pre>
       {ready && hovering && (
         <div
-          className={`left pointer-events-none absolute top-0 flex h-full w-full items-center justify-center bg-black text-base font-bold text-white opacity-75`}>
+          className={`left pointer-events-none absolute top-0 flex h-full w-full items-center justify-center rounded-md bg-black text-base font-bold text-white opacity-75 dark:bg-gray-100 dark:text-black`}>
           Click to copy
         </div>
       )}
       {ready && copied && (
         <div
-          className={`pointer-events-none absolute left-1/2 top-0 flex h-full w-full -translate-x-1/2 transform items-center justify-center bg-green-600 text-base font-bold text-white opacity-90`}>
+          className={`pointer-events-none absolute left-1/2 top-0 flex h-full w-full -translate-x-1/2 transform items-center justify-center rounded-md bg-green-600 text-base font-bold text-white opacity-90`}>
           Copied to clipboard!
         </div>
       )}

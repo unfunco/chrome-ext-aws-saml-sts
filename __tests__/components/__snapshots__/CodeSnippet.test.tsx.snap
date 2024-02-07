@@ -2,10 +2,10 @@
 
 exports[`CodeSnippet copy confirmation is not shown by default 1`] = `
 <div
-  className="group relative mb-2 border "
+  className="group relative mb-2 "
 >
   <pre
-    className="overflow-x-scroll border bg-gray-100 p-2 leading-5"
+    className="relative overflow-x-scroll rounded-md border border-gray-300 bg-gray-200 p-2 leading-5 dark:border-gray-700 dark:bg-gray-800"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -21,10 +21,10 @@ exports[`CodeSnippet copy confirmation is not shown by default 1`] = `
 
 exports[`CodeSnippet copy guidance is not shown by default 1`] = `
 <div
-  className="group relative mb-2 border "
+  className="group relative mb-2 "
 >
   <pre
-    className="overflow-x-scroll border bg-gray-100 p-2 leading-5"
+    className="relative overflow-x-scroll rounded-md border border-gray-300 bg-gray-200 p-2 leading-5 dark:border-gray-700 dark:bg-gray-800"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -40,10 +40,10 @@ exports[`CodeSnippet copy guidance is not shown by default 1`] = `
 
 exports[`CodeSnippet copy guidance is shown on hover 1`] = `
 <div
-  className="group relative mb-2 border "
+  className="group relative mb-2 "
 >
   <pre
-    className="overflow-x-scroll border bg-gray-100 p-2 leading-5"
+    className="relative overflow-x-scroll rounded-md border border-gray-300 bg-gray-200 p-2 leading-5 dark:border-gray-700 dark:bg-gray-800"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -59,10 +59,10 @@ exports[`CodeSnippet copy guidance is shown on hover 1`] = `
 
 exports[`CodeSnippet copy guidance is shown on hover 2`] = `
 <div
-  className="group relative mb-2 border cursor-pointer"
+  className="group relative mb-2 cursor-pointer"
 >
   <pre
-    className="overflow-x-scroll border bg-gray-100 p-2 leading-5"
+    className="relative overflow-x-scroll rounded-md border border-gray-300 bg-gray-200 p-2 leading-5 dark:border-gray-700 dark:bg-gray-800"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
@@ -74,7 +74,7 @@ exports[`CodeSnippet copy guidance is shown on hover 2`] = `
     </code>
   </pre>
   <div
-    className="left pointer-events-none absolute top-0 flex h-full w-full items-center justify-center bg-black text-base font-bold text-white opacity-75"
+    className="left pointer-events-none absolute top-0 flex h-full w-full items-center justify-center rounded-md bg-black text-base font-bold text-white opacity-75 dark:bg-gray-100 dark:text-black"
   >
     Click to copy
   </div>
