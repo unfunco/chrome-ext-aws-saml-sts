@@ -1,5 +1,8 @@
 # AWS SAML to STS Chrome extension
 
+[![CI](https://github.com/unfunco/chrome-ext-aws-saml-sts/actions/workflows/ci.yaml/badge.svg)](https://github.com/unfunco/chrome-ext-aws-saml-sts/actions/workflows/ci.yaml)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-purple.svg)](https://opensource.org/licenses/Apache-2.0)
+
 [Google Chrome] extension that intercepts the SAML assertion when logging into
 the [AWS] console and exchanges it for temporary [STS] credentials.
 
