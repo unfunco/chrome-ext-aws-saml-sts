@@ -23,7 +23,7 @@ const Popup = (): React.ReactElement => {
     AWS_ACCESS_KEY_ID: '',
     AWS_SECRET_ACCESS_KEY: '',
     AWS_SESSION_TOKEN: '',
-    __expires_at: 0,
+    _expiry: 0,
   })
 
   const [platforms, setPlatforms] = useState<Platform[]>([

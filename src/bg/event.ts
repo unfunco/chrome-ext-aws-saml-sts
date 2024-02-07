@@ -88,7 +88,7 @@ export const onBeforeRequestEvent = (
             AWS_ACCESS_KEY_ID: data.Credentials.AccessKeyId!,
             AWS_SECRET_ACCESS_KEY: data.Credentials.SecretAccessKey!,
             AWS_SESSION_TOKEN: data.Credentials.SessionToken!,
-            __expires_at: Date.parse(data.Credentials.Expiration!.toString()),
+            _expiry: Date.parse(data.Credentials.Expiration!.toString()),
           }).then(
             (): void => console.debug('Credentials saved.'),
             console.error,
