@@ -18,19 +18,22 @@ you sign in to the AWS console.
 
 ### Installation and usage
 
-Add to Chrome from the [Chrome Web Store].
+**Add to Chrome** from the [Chrome Web Store].
 
-Sign in to the AWS console as you normally would, once you've signed in, click
-the extension icon in the toolbar, choose your preferred platform and click
-either of the code snippets to copy the temporary credentials to your clipboard.
+Sign in to the AWS console as you normally would, and once you've signed in,
+click the extension icon in the toolbar and ensure your preferred platform is
+selected, then click either of the code snippets to copy the temporary
+credentials to your clipboard.
 
 Credentials are valid per the duration specified by the identity provider, they
-will automatically be removed from local storage when they expire.
+will automatically be removed from local storage when they expire and will no
+longer be visible in the user interface.
 
 ### Development and testing
 
 If you want to work on the plugin, or if your organisation blocks access to the
-Chrome Web Store, you can build and install the extension manually.
+Chrome Web Store, you can build and install the extension manually using the
+following instructions.
 
 #### Requirements
 
@@ -47,15 +50,26 @@ npm install
 ```
 
 Once the dependencies have been installed, you can start the development server
-which will watch for changes and rebuild the extension when necessary.
+which will watch for changes and rebuild the extension when necessary. When the
+development server is running, you can load the extension into Chrome by
+navigating to [chrome://extensions], enabling developer mode, and clicking
+"Load unpacked" to select the `dist` directory.
 
 ```bash
 npm run dev
 ```
 
+When you're ready to build the extension for distribution, you can run the build
+script which will create a `dist` directory containing the extension files. You
+can then package the extension and distribute it as you see fit, or load it into
+Chrome for use on your own machine.
+
 ```bash
 npm run build
 ```
+
+Alternatively, if you don't want to build the extension yourself, you can
+download the latest distribution from the relevant GitHub release.
 
 ## License
 
@@ -65,6 +79,7 @@ Made available under the terms of the [Apache License 2.0].
 [apache license 2.0]: LICENSE.md
 [aws]: https://aws.amazon.com
 [aws cli]: https://aws.amazon.com/cli/
+[chrome://extensions]: chrome://extensions
 [chrome web store]: https://chromewebstore.google.com/detail/aws-saml-to-sts/affnlpfpepgmjfhclafkknonoocdefnh
 [daniel morris]: https://unfun.co
 [google chrome]: https://www.google.com/chrome
