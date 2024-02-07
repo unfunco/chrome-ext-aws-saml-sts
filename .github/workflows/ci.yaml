@@ -68,6 +68,8 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
     - name: Prepare a release
       id: release
       uses: google-github-actions/release-please-action@v4
@@ -84,4 +86,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       if: ${{ steps.release.outputs.release_created }}
-      run: gh release upload ${{ steps.release.outputs.tag_name }} chrome-ext-aws-saml-sts.zip
+      run: gh release upload ${{ steps.release.outputs.tag_name }} ${{ steps.release.outputs.tag_name }}.zip
