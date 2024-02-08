@@ -63,14 +63,14 @@ const Popup = (): React.ReactElement => {
   const ready = typeof credentials?.AWS_ACCESS_KEY_ID !== 'undefined'
 
   return (
-    <div id={`popup`} className={`bg-gray-100 p-2`}>
+    <div id={`popup`} className={`bg-gray-100 p-2 dark:bg-gray-900`}>
       <nav className={`mb-2 flex space-x-4`}>
         {platforms.map((platform) => (
           <a
             className={classNames(
               platform.current
-                ? 'bg-gray-200 text-gray-900'
-                : 'text-gray-500 hover:text-gray-700',
+                ? 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100'
+                : 'text-gray-500 hover:bg-gray-800 hover:text-gray-300',
               'rounded-md px-3 py-2 text-sm font-medium',
             )}
             href={`#`}
@@ -80,7 +80,7 @@ const Popup = (): React.ReactElement => {
           </a>
         ))}
       </nav>
-      <div className={`text-xs`}>
+      <div className={`text-xs text-gray-700 dark:text-gray-300`}>
         {activeTab === 'macOS and Linux' && (
           <>
             <p className={`mb-2 p-1`}>
@@ -109,7 +109,7 @@ const Popup = (): React.ReactElement => {
           </>
         )}
       </div>
-      <div className={`text-xs`}>
+      <div className={`text-xs text-gray-700 dark:text-gray-300`}>
         <p className={`mb-2 p-1`}>
           <strong>Option 2: </strong>
           Paste the following text into your AWS credentials file.
