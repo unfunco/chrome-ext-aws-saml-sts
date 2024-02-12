@@ -69,8 +69,8 @@ const Popup = (): React.ReactElement => {
           <a
             className={classNames(
               platform.current
-                ? 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100'
-                : 'text-gray-500 hover:bg-gray-800 hover:text-gray-300',
+                ? 'bg-gray-200 text-gray-900 dark:bg-gray-800 dark:text-gray-100'
+                : 'text-gray-500 hover:bg-gray-200 hover:text-gray-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200',
               'rounded-md px-3 py-2 text-sm font-medium',
             )}
             href={`#`}
