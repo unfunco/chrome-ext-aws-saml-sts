@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.3.0](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.2.1...chrome-ext-aws-saml-sts-v0.3.0) (2024-02-12)
+
+
+### New features
+
+* Add support for dark mode ([#33](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/33)) ([90d03bc](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/90d03bcbaaaa190a49ff0fb52c07e058e95f4cb4))
+
+
+### Bug fixes
+
+* Do not include ms in time calculations ([#40](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/40)) ([a967cc9](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/a967cc9e271d65bcfa80eebeaa68e357ade8466e))
+* Fix dark mode hover states ([#39](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/39)) ([7227b6e](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/7227b6e9a32da4b8897b93e4649f6a9f78c4b447))
+* Fix release attachment automation ([#30](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/30)) ([f76b2cc](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/f76b2cce74da7e1bb16aab581c0deed0cf133cb8))
+
+
+### Miscellaneous
+
+* Add additional documentation to the README ([#32](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/32)) ([65af847](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/65af847ecccfcf1141f9458d0155cadc07b0d5b1))
+* Bump @types/jest from 29.5.11 to 29.5.12 ([#36](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/36)) ([2942cb9](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/2942cb9b4cd12a793a40ef32174db1a24c7f44bf))
+* Bump @types/node from 20.11.16 to 20.11.17 ([#37](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/37)) ([b8fb104](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/b8fb1044bde03b64e25ee7b72bfcd53cd7ac84af))
+* Bump @types/react from 18.2.52 to 18.2.55 ([#34](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/34)) ([e2b0e8e](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/e2b0e8eab388cc13dc05fa3db4ff4ed9bfdf28dc))
+* Bump @typescript-eslint/eslint-plugin from 6.20.0 to 6.21.0 ([#38](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/38)) ([47eeaba](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/47eeaba3fb372c401744fb1603949b73b9e36bcf))
+* Bump postcss from 8.4.33 to 8.4.35 ([#35](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/35)) ([9df63e3](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/9df63e3dd8a14186c0b4fcfcdca8035ef4efc531))
+
 ## [0.2.1](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.2.0...chrome-ext-aws-saml-sts-v0.2.1) (2024-02-07)
 
 
