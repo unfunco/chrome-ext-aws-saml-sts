@@ -8,7 +8,10 @@ export const gc = async (ms?: number): Promise<NodeJS.Timeout> => {
     credentials: AWSCredentials
   }
 
-  if (stored.credentials._expiry < Date.now()) {
+  const expiry = stored.credentials._expiry / 1000
+  const now = Math.floor(Date.now() / 1000)
+
+  if (now >= expiry) {
     await Browser.storage.local.remove('credentials')
   }
 
