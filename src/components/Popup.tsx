@@ -8,6 +8,7 @@ import {
   windowsSnippet,
 } from '@/utilities'
 import Browser from 'webextension-polyfill'
+import Expiry from '@/components/Expiry'
 
 type Platform = {
   current: boolean
@@ -19,6 +20,8 @@ function classNames(...classes: string[]): string {
 }
 
 const Popup = (): React.ReactElement => {
+  const [ready, setReady] = useState<boolean>(false)
+
   const [credentials, setCredentials] = useState<AWSCredentials>({
     AWS_ACCESS_KEY_ID: '',
     AWS_SECRET_ACCESS_KEY: '',
@@ -44,6 +47,8 @@ const Popup = (): React.ReactElement => {
     Browser.storage.local.get('platform').then((current): void => {
       handleTabChange(current.platform)
     })
+
+    setReady(!!credentials?.AWS_ACCESS_KEY_ID)
   }, [])
 
   const handleTabChange = (platform: string): void => {
@@ -59,8 +64,6 @@ const Popup = (): React.ReactElement => {
       )
     })
   }
-
-  const ready = typeof credentials?.AWS_ACCESS_KEY_ID !== 'undefined'
 
   return (
     <div id={`popup`} className={`bg-gray-100 p-2 dark:bg-gray-900`}>
@@ -116,6 +119,11 @@ const Popup = (): React.ReactElement => {
         </p>
         <CodeSnippet code={iniSnippet(credentials)} ready={ready} />
       </div>
+      {ready && (
+        <div className={`text-xs text-gray-700 dark:text-gray-300`}>
+          <Expiry time={credentials._expiry} />
+        </div>
+      )}
     </div>
   )
 }
