@@ -42,13 +42,12 @@ const Popup = (): React.ReactElement => {
   useEffect((): void => {
     Browser.storage.local.get('credentials').then((current): void => {
       setCredentials(current.credentials)
+      setReady(current.credentials?._expiry >= Date.now())
     })
 
     Browser.storage.local.get('platform').then((current): void => {
       handleTabChange(current.platform)
     })
-
-    setReady(!!credentials?.AWS_ACCESS_KEY_ID)
   }, [])
 
   const handleTabChange = (platform: string): void => {
