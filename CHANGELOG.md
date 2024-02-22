@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.4.0](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.3.0...chrome-ext-aws-saml-sts-v0.4.0) (2024-02-22)
+
+
+### New features
+
+* Show the expiry in the popup ([#47](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/47)) ([d5d57e6](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/d5d57e6b4b1777e9119fbe7a6432b13b930c7fd0))
+
+
+### Bug fixes
+
+* Fix an issue with the ready state ([#48](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/48)) ([095f2aa](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/095f2aadc725047d8dd7ba179c3778f1cffea249))
+
+
+### Miscellaneous
+
+* Bump @aws-sdk/client-sts from 3.504.0 to 3.515.0 ([#41](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/41)) ([6fb314b](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/6fb314b75239d11b677fc38c7b615647655e89d2))
+* Bump @types/react-dom from 18.2.18 to 18.2.19 ([#44](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/44)) ([e2e06f5](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/e2e06f56bcebd9017924500094db984ec536bb01))
+* Bump @typescript-eslint/parser from 6.20.0 to 7.0.1 ([#42](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/42)) ([9e2c46d](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/9e2c46d3d40cc13bec8bb393ebb64993d7e7e2ee))
+* Bump husky from 9.0.10 to 9.0.11 ([#43](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/43)) ([a9836c7](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/a9836c7d4cdca2b4e69dfeb0438ef3a7b4b83e45))
+* Bump vite from 5.0.12 to 5.1.3 ([#45](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/45)) ([03fdc8c](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/03fdc8cb012f5685f44d81c53dad3fac34c6ca27))
+
 ## [0.3.0](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.2.1...chrome-ext-aws-saml-sts-v0.3.0) (2024-02-12)
 
 
