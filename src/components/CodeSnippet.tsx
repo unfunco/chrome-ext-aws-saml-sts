@@ -33,7 +33,7 @@ const CodeSnippet = ({ code, ready }: CodeSnippetProps): React.ReactElement => {
         {ready && <code className={`font-mono`}>{code}</code>}
         {!ready && (
           <span className={'font-sans text-gray-500 dark:text-gray-300'}>
-            Waiting for credentials...
+            Sign-in to AWS to see credentials...
           </span>
         )}
       </pre>

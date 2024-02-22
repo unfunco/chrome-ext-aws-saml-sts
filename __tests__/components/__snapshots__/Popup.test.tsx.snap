@@ -50,13 +50,11 @@ exports[`Popup platform is configured to display macOS and Linux by default 1`] 
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
       >
-        <code
-          className="font-mono"
+        <span
+          className="font-sans text-gray-500 dark:text-gray-300"
         >
-          export AWS_ACCESS_KEY_ID=""
-export AWS_SECRET_ACCESS_KEY=""
-export AWS_SESSION_TOKEN=""
-        </code>
+          Sign-in to AWS to see credentials...
+        </span>
       </pre>
     </div>
   </div>
@@ -80,14 +78,11 @@ export AWS_SESSION_TOKEN=""
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
       >
-        <code
-          className="font-mono"
+        <span
+          className="font-sans text-gray-500 dark:text-gray-300"
         >
-          [default]
-aws_access_key_id = 
-aws_secret_access_key = 
-aws_session_token = 
-        </code>
+          Sign-in to AWS to see credentials...
+        </span>
       </pre>
     </div>
   </div>
