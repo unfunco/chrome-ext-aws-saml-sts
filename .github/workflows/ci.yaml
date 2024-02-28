@@ -9,6 +9,7 @@ on:
     - .gitattributes
     - .gitignore
     - .prettierignore
+    - CHANGELOG.md
     - LICENSE.md
     - README.md
     - nodemon.json
@@ -33,7 +34,7 @@ jobs:
     - name: Lint code
       run: npm run lint
     - name: Run unit tests
-      run: npm test
+      run: npm run test
 
   build:
     name: Build
@@ -52,13 +53,11 @@ jobs:
       run: npm ci
     - name: Build Chrome extension
       run: npm run build
-    - name: Zip build artifact
-      run: zip -r chrome-ext-aws-saml-sts.zip dist
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
       with:
-        name: chrome-ext-aws-saml-sts.zip
-        path: chrome-ext-aws-saml-sts.zip
+        name: dist
+        path: dist
 
   release:
     name: Release?
@@ -81,8 +80,11 @@ jobs:
       if: ${{ steps.release.outputs.release_created }}
       uses: actions/download-artifact@v4
       with:
-        name: chrome-ext-aws-saml-sts.zip
-        path: ${{ steps.release.outputs.tag_name }}.zip
+        name: dist
+        path: dist
+    - name: Compress build artefacts
+      if: ${{ steps.release.outputs.release_created }}
+      run: (cd dist && zip -r ../${{ steps.release.outputs.tag_name }}.zip .)
     - name: Attach build artifact to release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
