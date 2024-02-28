@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.4.1](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.4.0...chrome-ext-aws-saml-sts-v0.4.1) (2024-02-28)
+
+
+### Bug fixes
+
+* Fix the attachment of artifacts to releases ([#55](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/55)) ([735c563](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/735c563e1789198a38e1105a9e3691a46acf1099))
+
+
+### Miscellaneous
+
+* Bump @types/node from 20.11.17 to 20.11.20 ([#49](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/49)) ([91473c4](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/91473c4b189b07f5f3572fe6145e95d851f622aa))
+* Bump @typescript-eslint/eslint-plugin from 7.0.1 to 7.0.2 ([#52](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/52)) ([0a5788b](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/0a5788b4fd9bdd95c3278f69c3dc1192f7d3521c))
+* Bump fast-xml-parser from 4.3.4 to 4.3.5 ([#50](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/50)) ([3682275](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/3682275a16b7b1548fd70c26517e41a80e9c0b27))
+* Bump nodemon from 3.0.3 to 3.1.0 ([#51](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/51)) ([a126a81](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/a126a81cfcb28be5d52d553e5932a0754671687e))
+* Bump vite from 5.1.3 to 5.1.4 ([#53](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/53)) ([6f6a328](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/6f6a32863e8932406becbccba321c0935025c11b))
+
 ## [0.4.0](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.3.0...chrome-ext-aws-saml-sts-v0.4.0) (2024-02-22)
 
 
