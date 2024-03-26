@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.4.2](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.4.1...chrome-ext-aws-saml-sts-v0.4.2) (2024-03-26)
+
+
+### Miscellaneous
+
+* Bump @aws-sdk/client-sts from 3.515.0 to 3.525.0 ([#60](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/60)) ([ac67073](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/ac67073da3fc6422b150d8bca14ee7a49a53546d))
+* Bump @aws-sdk/client-sts from 3.525.0 to 3.529.1 ([#63](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/63)) ([0c47a1f](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/0c47a1f848047ae99f4d3866660fcadf4034042b))
+* Bump @aws-sdk/client-sts from 3.529.1 to 3.535.0 ([#70](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/70)) ([2d63c2e](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/2d63c2e2764b71ee38a511b5ebd77ff143944622))
+* Bump @types/node from 20.11.20 to 20.11.24 ([#57](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/57)) ([7d64f08](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/7d64f08765e7d13a995dbc6aec834efa7ebc52a1))
+* Bump @types/node from 20.11.24 to 20.11.30 ([#74](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/74)) ([bffb5fe](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/bffb5fe7c0c0ec784a8f3db5bc3830ac16709d38))
+* Bump @types/react from 18.2.55 to 18.2.61 ([#56](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/56)) ([ef33dcb](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/ef33dcb311cd4855cf8d04ffe06e38d78dd06512))
+* Bump @types/react from 18.2.61 to 18.2.64 ([#65](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/65)) ([1f9ce54](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/1f9ce54e156ea354e0fa7825149b1627e69d8c32))
+* Bump @types/react-dom from 18.2.19 to 18.2.22 ([#76](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/76)) ([ebf30e8](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/ebf30e865c7d51dde564697c4311975e28976e61))
+* Bump @typescript-eslint/eslint-plugin from 7.0.2 to 7.1.0 ([#58](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/58)) ([1b677dd](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/1b677dde7d836540bc6cd86a993677fd0fcd06d8))
+* Bump @typescript-eslint/eslint-plugin from 7.1.0 to 7.1.1 ([#66](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/66)) ([0188d75](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/0188d75c5a275e8673a9d0ecf191f90572c9a9a2))
+* Bump @typescript-eslint/parser from 7.0.1 to 7.1.0 ([#59](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/59)) ([ec52e45](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/ec52e45f46289bf552ca024d73fc4cda7ddb3890))
+* Bump @typescript-eslint/parser from 7.1.0 to 7.2.0 ([#67](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/67)) ([86987a5](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/86987a52419108da28e8202e7c4c3a6f9ccc408d))
+* Bump @typescript-eslint/parser from 7.2.0 to 7.3.1 ([#73](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/73)) ([3dd39e8](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/3dd39e85bbb8011a59e3eb78bef6772bed10c048))
+* Bump autoprefixer from 10.4.17 to 10.4.18 ([#71](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/71)) ([c09e334](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/c09e3341b5e7661caf62409d01f88a9235453fa4))
+* Bump eslint from 8.56.0 to 8.57.0 ([#64](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/64)) ([8673789](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/867378927d7335678738ca9fa778b22ad263a0e3))
+* Bump postcss from 8.4.35 to 8.4.36 ([#68](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/68)) ([7233d41](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/7233d41b7acbb471d82718f3f5a88b8d26ec5083))
+* Bump prettier-plugin-tailwindcss from 0.5.11 to 0.5.12 ([#69](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/69)) ([6f4cd39](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/6f4cd39c8c99f1b99a5c060b20e1cdd12ca5559c))
+* Bump typescript from 5.3.3 to 5.4.2 ([#62](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/62)) ([b4d8b5d](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/b4d8b5d8638232c20a97d083a072eb8ac371bd81))
+* Bump typescript from 5.4.2 to 5.4.3 ([#72](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/72)) ([fe54412](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/fe544123506ef2c25e9e1452bf661646288d3c6f))
+* Bump vite from 5.1.4 to 5.2.6 ([#75](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/75)) ([42fcba5](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/42fcba5734c7c8d2748f565fdd83bf4d05cdcf65))
+
 ## [0.4.1](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.4.0...chrome-ext-aws-saml-sts-v0.4.1) (2024-02-28)
 
 
