@@ -40,7 +40,7 @@
     "ts-node": "10.9.2",
     "typescript": "5.4.5",
     "vite": "5.2.11",
-    "vite-plugin-static-copy": "1.0.3"
+    "vite-plugin-static-copy": "1.0.4"
   },
   "engines": {
     "node": "20",
