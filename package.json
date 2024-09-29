@@ -5,7 +5,7 @@
     "url": "https://unfun.co"
   },
   "dependencies": {
-    "@aws-sdk/client-sts": "3.574.0",
+    "@aws-sdk/client-sts": "3.658.1",
     "fast-xml-parser": "4.4.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
