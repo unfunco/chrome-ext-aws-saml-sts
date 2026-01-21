@@ -20,9 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         cache: npm
         cache-dependency-path: package-lock.json
@@ -42,9 +42,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         cache: npm
         cache-dependency-path: package-lock.json
@@ -68,7 +68,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
     - name: Prepare a release
       id: release
       uses: googleapis/release-please-action@v4
@@ -78,7 +78,7 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
     - name: Download build artifact
       if: ${{ steps.release.outputs.release_created }}
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v7
       with:
         name: dist
         path: dist
