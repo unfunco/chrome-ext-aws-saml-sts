@@ -54,7 +54,7 @@ jobs:
     - name: Build Chrome extension
       run: npm run build
     - name: Upload build artifact
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: dist
         path: dist
