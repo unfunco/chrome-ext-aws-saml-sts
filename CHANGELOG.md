@@ -1,5 +1,72 @@
 # Changelog
 
+## [0.5.0](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.4.2...chrome-ext-aws-saml-sts-v0.5.0) (2026-03-14)
+
+
+### New features
+
+* Improve the copy in the extension popup ([#233](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/233)) ([43f649d](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/43f649de29b0f58a4687c71284e82fbfad0d0ff6))
+* Improve the design of the extension popup ([#231](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/231)) ([26ce0f5](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/26ce0f5c994fd9838fe69a2532ac9e00310784ea))
+* Support non-standard AWS partitions ([#236](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/236)) ([a1abfb7](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/a1abfb7f20257066dda5b8fc99338485d794e2f8))
+
+
+### Bug fixes
+
+* Capture SAML when only one role is available ([#230](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/230)) ([80b8605](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/80b86054b31ff62d0aa3fe1376456675a55f8b85))
+
+
+### Miscellaneous
+
+* Bring all dependencies up-to-date ([#228](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/228)) ([3ddfb49](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/3ddfb49e83ed687c66d8fbddf05f7ab2e5bd4863))
+* Bump @aws-sdk/client-sts from 3.556.0 to 3.574.0 ([#112](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/112)) ([7cd6d1d](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/7cd6d1df6caa37a8f09fc716cabb33db758e3673))
+* Bump @crxjs/vite-plugin from 2.0.0-beta.23 to 2.3.0 ([#218](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/218)) ([413c8c3](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/413c8c383714b10115a9086dd52f12c55249571a))
+* Bump @types/node from 20.12.11 to 20.12.12 ([#118](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/118)) ([7a9ef5d](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/7a9ef5d14e07d58b90646a31b7b07ee1d444142d))
+* Bump @types/node from 20.12.12 to 25.0.9 ([#213](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/213)) ([4061012](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/4061012f4d62d2bc221c2d9ffa42338517dd40de))
+* Bump @types/node from 20.12.7 to 20.12.8 ([#109](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/109)) ([fc80efc](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/fc80efc68d88212a128d98bcc8440e7bf951c685))
+* Bump @types/node from 20.12.8 to 20.12.11 ([#114](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/114)) ([6d28265](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/6d28265b386c36002604418c7f186d2b59f06b43))
+* Bump @types/node from 25.0.9 to 25.2.0 ([#223](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/223)) ([64c96ef](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/64c96ef07c1dc4dfe30946988f023f4528cdb75d))
+* Bump @types/react from 18.3.1 to 18.3.2 ([#111](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/111)) ([c2f746e](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/c2f746e1a249a94b8b34170cd0697021cc5406de))
+* Bump @types/react from 18.3.2 to 18.3.3 ([#125](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/125)) ([ec7075d](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/ec7075d71c044f8d7a482940d3fa8cd6a343d994))
+* Bump @typescript-eslint/eslint-plugin from 7.7.0 to 7.8.0 ([#105](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/105)) ([b2de6fb](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/b2de6fb049d733c0bb0b9bad83cf5f7261ae0c73))
+* Bump @typescript-eslint/eslint-plugin from 7.8.0 to 7.9.0 ([#120](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/120)) ([d1abcd5](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/d1abcd5b3e8ff64999728139d581c35a728120c3))
+* Bump @typescript-eslint/parser from 7.5.0 to 7.7.1 ([#102](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/102)) ([44ade38](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/44ade38d1dcb13c943da5bcd1ef1445287c90485))
+* Bump @typescript-eslint/parser from 7.7.1 to 7.8.0 ([#107](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/107)) ([afeb5e6](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/afeb5e63fb62ea58ad3ebb4dddef3e08e27b1779))
+* Bump @typescript-eslint/parser from 7.8.0 to 7.18.0 ([#158](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/158)) ([938add9](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/938add9f48669b5574d76d05eadb150035efced7))
+* Bump @vitejs/plugin-react-swc from 3.6.0 to 3.7.0 ([#127](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/127)) ([9b1fa95](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/9b1fa951aa0d7473334a1cbf75acff41dd6c5e79))
+* Bump @vitejs/plugin-react-swc from 3.7.0 to 4.2.2 ([#210](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/210)) ([7144f2e](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/7144f2ea7459105c6b75b27cee12baf3c7ab9f3f))
+* Bump actions/checkout from 4 to 6 ([#209](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/209)) ([0480ac4](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/0480ac47f1c30b7cde1457f9336a1be58f8ea551))
+* Bump actions/download-artifact from 4 to 7 ([#207](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/207)) ([94ce052](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/94ce052c3d165b025a53f4d708a7a24883ab5f97))
+* Bump actions/download-artifact from 7 to 8 ([#226](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/226)) ([44011be](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/44011be5e66cf2b249aa97d578e7dc2d5194e2a4))
+* Bump actions/github-script from 7 to 8 ([#205](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/205)) ([b3603e7](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/b3603e7c4712092e8af8f496ec7bd749fed6c5dd))
+* Bump actions/labeler from 5 to 6 ([#206](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/206)) ([6277a30](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/6277a306b1d6de6f7fe18e86fef704733725b487))
+* Bump actions/setup-node from 4 to 6 ([#208](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/208)) ([136e512](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/136e5124ea6027a62bbef143c7c2837e6dc8a832))
+* Bump actions/upload-artifact from 4 to 6 ([#215](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/215)) ([caea1f7](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/caea1f7548b44c643aa26b7c45d9601edb300393))
+* Bump actions/upload-artifact from 6 to 7 ([#227](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/227)) ([f038e96](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/f038e964df782d7a7551a6485b35067ec538444d))
+* Bump autoprefixer from 10.4.19 to 10.4.23 ([#214](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/214)) ([8317b3c](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/8317b3cd80371a209944941591b63c7fb3f9fadf))
+* Bump eslint-config-prettier from 9.1.0 to 10.1.8 ([#211](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/211)) ([aea2424](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/aea2424530d8a4db60d80ad94cc58ab6d43bc0ea))
+* Bump fast-xml-parser from 4.3.6 to 4.4.0 ([#119](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/119)) ([dfe3f5f](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/dfe3f5f1568626d070aa3bf9beaf1e36643a1348))
+* Bump fast-xml-parser from 4.4.0 to 5.3.3 ([#216](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/216)) ([c52f704](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/c52f7047561735c1cec03372a2fec62950395b81))
+* Bump fast-xml-parser from 5.3.3 to 5.3.5 ([#225](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/225)) ([0e9c98c](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/0e9c98c6aa38505f1da89135be210eedbab0708d))
+* Bump jest-environment-jsdom from 29.7.0 to 30.2.0 ([#217](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/217)) ([b4ce900](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/b4ce900dd3b9c60f13058608ef68b238160a212a))
+* Bump lint-staged from 15.2.2 to 15.2.7 ([#136](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/136)) ([fd32596](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/fd3259661694f19fa7765c4727c8c29ae5c9eb43))
+* Bump nodemon from 3.1.0 to 3.1.1 ([#122](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/122)) ([ef78abc](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/ef78abc41dab8baa2cfd5f2b083c5f74b376308a))
+* Bump postcss from 8.4.38 to 8.5.6 ([#224](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/224)) ([96628bf](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/96628bf19e9d67545e48a6b238df165e0a0b66af))
+* Bump prettier-plugin-tailwindcss from 0.5.14 to 0.7.2 ([#220](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/220)) ([6de0317](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/6de03171611ff4135018ac38c0af535b3d1f1f1b))
+* Bump react and @types/react ([#101](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/101)) ([668f957](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/668f9577c6cc9a4fb19264123d7dc2027b4898ca))
+* Bump react-dom and @types/react-dom ([#108](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/108)) ([1f525e5](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/1f525e5389eaf4be1eafefe8597f96814ce10308))
+* Bump react-test-renderer and @types/react-test-renderer ([#106](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/106)) ([7439f82](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/7439f82b930df6a85036f772ed5803076e040925))
+* Bump vite from 5.2.10 to 5.2.11 ([#110](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/110)) ([892aa27](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/892aa27bdb261bf3a4ceab9478b9c21bc96076b3))
+* Bump vite from 5.2.11 to 5.4.8 ([#183](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/183)) ([a67da89](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/a67da89c427383d84a248194555a903f465e6f10))
+* Bump vite from 5.2.8 to 5.2.10 ([#103](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/103)) ([e33433f](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/e33433fc0620c370ed374711e641da51d9e7ac73))
+* Bump vite-plugin-static-copy from 1.0.2 to 1.0.3 ([#100](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/100)) ([946d5d2](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/946d5d2599f80d464a869c7520eac772cea4bded))
+* Bump vite-plugin-static-copy from 1.0.3 to 1.0.4 ([#113](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/113)) ([4c39b76](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/4c39b76c1fa2a6bf60d747fe75470f15fb0c75c5))
+* Bump vite-plugin-static-copy from 1.0.4 to 1.0.5 ([#116](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/116)) ([56a33b5](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/56a33b51969c23da1f5f5f69b06a54b89899d3ab))
+* Bump webextension-polyfill from 0.11.0 to 0.12.0 ([#117](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/117)) ([ac37508](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/ac3750815848c8687f9a60e8796a4ff2c131f63d))
+* Harden workflows and improve the README ([#234](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/234)) ([26d7ef8](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/26d7ef88bbb5cc68247db2ca6a8bc46a097c12ce))
+* Replace Apache-2.0 with MIT ([#229](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/229)) ([1072b80](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/1072b809ea7d4a9ce72a68ec0d25c87d4d6078d3))
+* Update release-please-action organisation ([#115](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/115)) ([7b2a9ad](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/7b2a9adcc3f657c86fcf13f5ffef5f39891423d2))
+* Use ubuntu-slim for the labelling job ([#232](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/232)) ([96a186e](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/96a186eee0edf73fa547dc0f424c34c62da1ae97))
+
 ## [0.4.2](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.4.1...chrome-ext-aws-saml-sts-v0.4.2) (2024-04-21)
 
 
