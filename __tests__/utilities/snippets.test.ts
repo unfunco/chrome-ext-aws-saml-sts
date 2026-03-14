@@ -12,6 +12,7 @@ describe('Utilities', (): void => {
       AWS_ACCESS_KEY_ID: '<access_key_id>',
       AWS_SECRET_ACCESS_KEY: '<secret_access_key>',
       AWS_SESSION_TOKEN: '<session_token>',
+      _expiry: 0,
     }
 
     it('can render INI credentials', (): void => {

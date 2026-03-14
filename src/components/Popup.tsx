@@ -9,11 +9,13 @@ import {
   unixSnippet,
   windowsSnippet,
 } from '@/utilities'
-import Browser from 'webextension-polyfill'
+import { summarizeCredentialValue } from '@/utilities/debug'
+import Browser, { type Storage } from 'webextension-polyfill'
 import Expiry from '@/components/Expiry'
 
 const PLATFORM_NAMES = ['macOS and Linux', 'Windows', 'PowerShell'] as const
 const DEFAULT_PLATFORM = PLATFORM_NAMES[0]
+const LOG_PREFIX = '[AWS SAML to STS][popup]'
 
 type PlatformName = (typeof PLATFORM_NAMES)[number]
 
@@ -43,41 +45,108 @@ const Popup = (): React.ReactElement => {
   const [activeTab, setActiveTab] = useState<PlatformName>(DEFAULT_PLATFORM)
   const platforms = buildPlatforms(activeTab)
 
-  useEffect((): void => {
-    void Browser.storage.local.get('credentials').then((current): void => {
-      const storedCredentials = current.credentials
+  useEffect((): (() => void) => {
+    const updateCredentials = (
+      storedCredentials: unknown,
+      source: string,
+    ): void => {
+      const summary = summarizeCredentialValue(storedCredentials)
 
       if (typeof storedCredentials === 'undefined') {
+        console.log(`${LOG_PREFIX} No stored credentials available.`, {
+          source,
+          ...summary,
+        })
+        setCredentials(defaultCredentials)
+        setReady(false)
         return
       }
 
       if (!isAWSCredentials(storedCredentials)) {
-        console.error('Invalid credentials found in local storage')
+        console.error(
+          `${LOG_PREFIX} Invalid credentials found in local storage.`,
+          {
+            source,
+            ...summary,
+          },
+        )
+        setCredentials(defaultCredentials)
+        setReady(false)
         return
       }
 
+      const nextReady = storedCredentials._expiry >= Date.now()
+      console.log(`${LOG_PREFIX} Loaded stored credentials.`, {
+        source,
+        ready: nextReady,
+        ...summary,
+      })
+
       setCredentials(storedCredentials)
-      setReady(storedCredentials._expiry >= Date.now())
-    })
+      setReady(nextReady)
+    }
 
-    void Browser.storage.local.get('platform').then((current): void => {
-      const storedPlatform = current.platform
-
+    const updatePlatform = (storedPlatform: unknown, source: string): void => {
       if (typeof storedPlatform === 'undefined') {
+        console.log(`${LOG_PREFIX} No stored platform preference found.`, {
+          fallback: DEFAULT_PLATFORM,
+          source,
+        })
         return
       }
 
       if (!isPlatformName(storedPlatform)) {
-        console.error('Invalid platform found in local storage')
+        console.error(
+          `${LOG_PREFIX} Invalid platform found in local storage.`,
+          {
+            source,
+            value: storedPlatform,
+          },
+        )
         return
       }
 
+      console.log(`${LOG_PREFIX} Loaded platform preference.`, {
+        platform: storedPlatform,
+        source,
+      })
       setActiveTab(storedPlatform)
+    }
+
+    const handleStorageChange = (
+      changes: Storage.StorageAreaOnChangedChangesType,
+    ): void => {
+      if ('credentials' in changes) {
+        updateCredentials(changes.credentials?.newValue, 'storage.onChanged')
+      }
+
+      if ('platform' in changes) {
+        updatePlatform(changes.platform?.newValue, 'storage.onChanged')
+      }
+    }
+
+    console.log(`${LOG_PREFIX} Opening popup and loading stored state.`)
+
+    void Browser.storage.local.get('credentials').then((current): void => {
+      updateCredentials(current.credentials, 'initial load')
     })
+
+    void Browser.storage.local.get('platform').then((current): void => {
+      updatePlatform(current.platform, 'initial load')
+    })
+
+    Browser.storage.local.onChanged.addListener(handleStorageChange)
+    console.log(`${LOG_PREFIX} Registered storage change listener.`)
+
+    return (): void => {
+      Browser.storage.local.onChanged.removeListener(handleStorageChange)
+      console.log(`${LOG_PREFIX} Removed storage change listener.`)
+    }
   }, [])
 
   const handleTabChange = (platform: PlatformName): void => {
     void Browser.storage.local.set({ platform }).then((): void => {
+      console.log(`${LOG_PREFIX} Updated platform preference.`, { platform })
       setActiveTab(platform)
     })
   }
