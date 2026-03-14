@@ -1,6 +1,8 @@
 export {
   type AWSCredentials,
+  defaultCredentials,
   iniSnippet,
+  isAWSCredentials,
   powershellSnippet,
   unixSnippet,
   windowsSnippet,

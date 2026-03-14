@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 import CodeSnippet from '@/components/CodeSnippet'
 import {
   type AWSCredentials,
+  defaultCredentials,
   iniSnippet,
+  isAWSCredentials,
   powershellSnippet,
   unixSnippet,
   windowsSnippet,
@@ -10,57 +12,73 @@ import {
 import Browser from 'webextension-polyfill'
 import Expiry from '@/components/Expiry'
 
+const PLATFORM_NAMES = ['macOS and Linux', 'Windows', 'PowerShell'] as const
+const DEFAULT_PLATFORM = PLATFORM_NAMES[0]
+
+type PlatformName = (typeof PLATFORM_NAMES)[number]
+
 type Platform = {
   current: boolean
-  name: string
+  name: PlatformName
 }
 
 function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(' ')
 }
 
+const buildPlatforms = (activePlatform: PlatformName): Platform[] =>
+  PLATFORM_NAMES.map((name) => ({
+    current: name === activePlatform,
+    name,
+  }))
+
+const isPlatformName = (value: unknown): value is PlatformName =>
+  typeof value === 'string' &&
+  PLATFORM_NAMES.some((platform) => platform === value)
+
 const Popup = (): React.ReactElement => {
   const [ready, setReady] = useState<boolean>(false)
-
-  const [credentials, setCredentials] = useState<AWSCredentials>({
-    AWS_ACCESS_KEY_ID: '',
-    AWS_SECRET_ACCESS_KEY: '',
-    AWS_SESSION_TOKEN: '',
-    _expiry: 0,
-  })
-
-  const [platforms, setPlatforms] = useState<Platform[]>([
-    { name: 'macOS and Linux', current: true },
-    { name: 'Windows', current: false },
-    { name: 'PowerShell', current: false },
-  ])
-
-  const [activeTab, setActiveTab] = useState<string>(
-    platforms.find((p) => p.current)?.name ?? 'macOS and Linux',
-  )
+  const [credentials, setCredentials] =
+    useState<AWSCredentials>(defaultCredentials)
+  const [activeTab, setActiveTab] = useState<PlatformName>(DEFAULT_PLATFORM)
+  const platforms = buildPlatforms(activeTab)
 
   useEffect((): void => {
-    Browser.storage.local.get('credentials').then((current): void => {
-      setCredentials(current.credentials)
-      setReady(current.credentials?._expiry >= Date.now())
+    void Browser.storage.local.get('credentials').then((current): void => {
+      const storedCredentials = current.credentials
+
+      if (typeof storedCredentials === 'undefined') {
+        return
+      }
+
+      if (!isAWSCredentials(storedCredentials)) {
+        console.error('Invalid credentials found in local storage')
+        return
+      }
+
+      setCredentials(storedCredentials)
+      setReady(storedCredentials._expiry >= Date.now())
     })
 
-    Browser.storage.local.get('platform').then((current): void => {
-      handleTabChange(current.platform)
+    void Browser.storage.local.get('platform').then((current): void => {
+      const storedPlatform = current.platform
+
+      if (typeof storedPlatform === 'undefined') {
+        return
+      }
+
+      if (!isPlatformName(storedPlatform)) {
+        console.error('Invalid platform found in local storage')
+        return
+      }
+
+      setActiveTab(storedPlatform)
     })
   }, [])
 
-  const handleTabChange = (platform: string): void => {
-    Browser.storage.local.set({ platform }).then((): void => {
+  const handleTabChange = (platform: PlatformName): void => {
+    void Browser.storage.local.set({ platform }).then((): void => {
       setActiveTab(platform)
-      setPlatforms(
-        platforms.map(
-          (p): Platform => ({
-            ...p,
-            current: p.name === platform,
-          }),
-        ),
-      )
     })
   }
 

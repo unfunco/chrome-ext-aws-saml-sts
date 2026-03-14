@@ -5,6 +5,29 @@ export type AWSCredentials = {
   _expiry: number
 }
 
+export const defaultCredentials: AWSCredentials = {
+  AWS_ACCESS_KEY_ID: '',
+  AWS_SECRET_ACCESS_KEY: '',
+  AWS_SESSION_TOKEN: '',
+  _expiry: 0,
+}
+
+export const isAWSCredentials = (value: unknown): value is AWSCredentials => {
+  if (typeof value !== 'object' || value === null) {
+    return false
+  }
+
+  const credentials = value as Record<string, unknown>
+
+  return (
+    typeof credentials.AWS_ACCESS_KEY_ID === 'string' &&
+    typeof credentials.AWS_SECRET_ACCESS_KEY === 'string' &&
+    typeof credentials.AWS_SESSION_TOKEN === 'string' &&
+    typeof credentials._expiry === 'number' &&
+    Number.isFinite(credentials._expiry)
+  )
+}
+
 export const iniSnippet = (credentials: AWSCredentials): string =>
   [
     `[default]`,

@@ -22,7 +22,7 @@ type Role = {
 
 export const onBeforeRequestEvent = (
   details: WebRequest.OnBeforeRequestDetailsType,
-): void | WebRequest.BlockingResponseOrPromise => {
+): void => {
   if (!details.requestBody?.formData) {
     throw new Error('Could not find form data')
   }
@@ -99,8 +99,4 @@ export const onBeforeRequestEvent = (
         console.error(error)
       },
     )
-
-  return new Promise((): { cancel: boolean } => {
-    return { cancel: false }
-  })
 }

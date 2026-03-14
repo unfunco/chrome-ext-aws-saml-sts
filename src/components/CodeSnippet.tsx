@@ -45,7 +45,7 @@ const CodeSnippet = ({ code, ready }: CodeSnippetProps): React.ReactElement => {
       )}
       {ready && copied && (
         <div
-          className={`pointer-events-none absolute left-1/2 top-0 flex h-full w-full -translate-x-1/2 transform items-center justify-center rounded-md bg-green-600 text-base font-bold text-white opacity-90`}>
+          className={`pointer-events-none absolute top-0 left-1/2 flex h-full w-full -translate-x-1/2 transform items-center justify-center rounded-md bg-green-600 text-base font-bold text-white opacity-90`}>
           Copied to clipboard!
         </div>
       )}

@@ -1,5 +1,5 @@
 import autoprefixer from 'autoprefixer'
-import tailwind from 'tailwindcss'
+import tailwind from '@tailwindcss/postcss'
 
 // noinspection JSUnusedGlobalSymbols
 export default {
