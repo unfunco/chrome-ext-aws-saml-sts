@@ -12,6 +12,7 @@ import {
 import { summarizeCredentialValue } from '@/utilities/debug'
 import Browser, { type Storage } from 'webextension-polyfill'
 import Expiry from '@/components/Expiry'
+import GitHubIcon from '@/components/GitHubIcon'
 
 const PLATFORM_OPTIONS = [
   {
@@ -224,11 +225,17 @@ const Popup = (): React.ReactElement => {
         </p>
         <CodeSnippet code={iniSnippet(credentials)} ready={ready} />
       </div>
-      {ready && (
-        <div className={`popup__expiry`}>
-          <Expiry time={credentials._expiry} />
-        </div>
-      )}
+      <footer className={`popup__footer`}>
+        {ready && <Expiry time={credentials._expiry} />}
+        <a
+          aria-label="View source on GitHub"
+          className="popup__github-link"
+          href="https://github.com/unfunco/chrome-ext-aws-saml-sts"
+          rel="noopener noreferrer"
+          target="_blank">
+          <GitHubIcon />
+        </a>
+      </footer>
     </div>
   )
 }
