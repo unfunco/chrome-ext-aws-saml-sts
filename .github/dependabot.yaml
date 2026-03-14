@@ -5,6 +5,8 @@ updates:
   commit-message:
     prefix: chore
     prefix-development: chore
+  cooldown:
+    default-days: 7
   directory: "/"
   labels:
   - chore 🧹
@@ -20,6 +22,8 @@ updates:
   commit-message:
     prefix: chore
     prefix-development: chore
+  cooldown:
+    default-days: 7
   directory: "/"
   labels:
   - chore 🧹

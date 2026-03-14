@@ -20,13 +20,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v6
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
     - name: Setup Node.js
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
       with:
         cache: npm
         cache-dependency-path: package-lock.json
-        node-version: 20
+        node-version-file: .node-version
     - name: Install dependencies
       run: npm ci
     - name: Check formatting
@@ -42,19 +42,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v6
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
     - name: Setup Node.js
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
       with:
         cache: npm
         cache-dependency-path: package-lock.json
-        node-version: 20
+        node-version-file: .node-version
     - name: Install dependencies
       run: npm ci
     - name: Build Chrome extension
       run: npm run build
     - name: Upload build artifact
-      uses: actions/upload-artifact@v7
+      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
       with:
         name: dist
         path: dist
@@ -68,17 +68,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v6
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
     - name: Prepare a release
       id: release
-      uses: googleapis/release-please-action@v4
+      uses: googleapis/release-please-action@16a9c90856f42705d54a6fda1823352bdc62cf38 # v4.4.0
       with:
         config-file: .github/release-please-config.json
         manifest-file: .github/release-please-manifest.json
         token: ${{ secrets.GITHUB_TOKEN }}
     - name: Download build artifact
       if: ${{ steps.release.outputs.release_created }}
-      uses: actions/download-artifact@v8
+      uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
       with:
         name: dist
         path: dist
