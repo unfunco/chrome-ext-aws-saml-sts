@@ -70,7 +70,7 @@ button {
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  padding: 10px 12px 12px;
+  padding: 20px;
 }
 
 .popup__tabs {
@@ -79,7 +79,7 @@ button {
   border-radius: 12px;
   display: flex;
   gap: 4px;
-  margin: 0 0 12px;
+  margin: 0 0 20px;
   padding: 4px;
 }
 
@@ -103,11 +103,6 @@ button {
     color 120ms ease;
 }
 
-.popup__tab:hover {
-  background-color: var(--popup-tab-hover-bg);
-  color: var(--popup-text);
-}
-
 .popup__tab:focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
@@ -127,7 +122,7 @@ button {
 
 .popup__section + .popup__section {
   border-top: 1px solid var(--popup-card-border);
-  margin-top: 12px;
+  margin-top: 20px;
   padding-top: 12px;
 }
 
@@ -138,7 +133,7 @@ button {
   font-size: 0.74rem;
   font-weight: 600;
   gap: 4px;
-  margin: 0 0 6px;
+  margin: 0 0 8px;
   flex-wrap: wrap;
 }
 
@@ -150,8 +145,8 @@ button {
 .popup__expiry {
   color: var(--popup-muted);
   font-size: 0.78rem;
-  margin-top: 12px;
-  padding-top: 10px;
+  margin-top: 20px;
+  padding-top: 0;
 }
 
 .expiry {
@@ -180,7 +175,7 @@ button {
   line-height: 1.45;
   margin: 0;
   overflow-x: auto;
-  padding: 10px 12px;
+  padding: 12px;
 }
 
 .code-snippet__code {
