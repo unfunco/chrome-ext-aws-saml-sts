@@ -2,19 +2,19 @@
 
 exports[`CodeSnippet copy confirmation is shown after copying and clears after the timeout 1`] = `
 <div
-  class="group relative mb-2 "
+  class="code-snippet "
 >
   <pre
-    class="relative overflow-x-scroll rounded-md border border-gray-300 bg-gray-200 p-2 leading-5 dark:border-gray-700 dark:bg-gray-800"
+    class="code-snippet__pre"
   >
     <code
-      class="font-mono"
+      class="code-snippet__code"
     >
       const greeting = 'Hello, world!'
     </code>
   </pre>
   <div
-    class="pointer-events-none absolute top-0 left-1/2 flex h-full w-full -translate-x-1/2 transform items-center justify-center rounded-md bg-green-600 text-base font-bold text-white opacity-90"
+    class="code-snippet__overlay code-snippet__overlay--success"
   >
     Copied to clipboard!
   </div>
@@ -23,13 +23,13 @@ exports[`CodeSnippet copy confirmation is shown after copying and clears after t
 
 exports[`CodeSnippet copy guidance is not shown by default 1`] = `
 <div
-  class="group relative mb-2 "
+  class="code-snippet "
 >
   <pre
-    class="relative overflow-x-scroll rounded-md border border-gray-300 bg-gray-200 p-2 leading-5 dark:border-gray-700 dark:bg-gray-800"
+    class="code-snippet__pre"
   >
     <code
-      class="font-mono"
+      class="code-snippet__code"
     >
       const greeting = 'Hello, world!'
     </code>
@@ -39,19 +39,19 @@ exports[`CodeSnippet copy guidance is not shown by default 1`] = `
 
 exports[`CodeSnippet copy guidance is shown on hover 1`] = `
 <div
-  class="group relative mb-2 cursor-pointer"
+  class="code-snippet code-snippet--interactive"
 >
   <pre
-    class="relative overflow-x-scroll rounded-md border border-gray-300 bg-gray-200 p-2 leading-5 dark:border-gray-700 dark:bg-gray-800"
+    class="code-snippet__pre"
   >
     <code
-      class="font-mono"
+      class="code-snippet__code"
     >
       const greeting = 'Hello, world!'
     </code>
   </pre>
   <div
-    class="left pointer-events-none absolute top-0 flex h-full w-full items-center justify-center rounded-md bg-black text-base font-bold text-white opacity-75 dark:bg-gray-100 dark:text-black"
+    class="code-snippet__overlay"
   >
     Click to copy
   </div>

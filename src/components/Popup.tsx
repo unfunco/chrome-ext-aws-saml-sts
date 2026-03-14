@@ -152,27 +152,26 @@ const Popup = (): React.ReactElement => {
   }
 
   return (
-    <div id={`popup`} className={`bg-gray-100 p-2 dark:bg-gray-900`}>
-      <nav className={`mb-2 flex space-x-4`}>
+    <div id={`popup`} className={`popup`}>
+      <nav aria-label={`Platform selection`} className={`popup__tabs`}>
         {platforms.map((platform) => (
-          <a
+          <button
+            aria-pressed={platform.current}
             className={classNames(
-              platform.current
-                ? 'bg-gray-200 text-gray-900 dark:bg-gray-800 dark:text-gray-100'
-                : 'text-gray-500 hover:bg-gray-200 hover:text-gray-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200',
-              'rounded-md px-3 py-2 text-sm font-medium',
+              'popup__tab',
+              platform.current ? 'popup__tab--active' : '',
             )}
-            href={`#`}
             key={platform.name}
-            onClick={(): void => handleTabChange(platform.name)}>
+            onClick={(): void => handleTabChange(platform.name)}
+            type={`button`}>
             {platform.name}
-          </a>
+          </button>
         ))}
       </nav>
-      <div className={`text-xs text-gray-700 dark:text-gray-300`}>
+      <div className={`popup__section`}>
         {activeTab === 'macOS and Linux' && (
           <>
-            <p className={`mb-2 p-1`}>
+            <p className={`popup__intro`}>
               <strong>Option 1: </strong>
               Run the following commands in your terminal.
             </p>
@@ -181,7 +180,7 @@ const Popup = (): React.ReactElement => {
         )}
         {activeTab === 'Windows' && (
           <>
-            <p className={`mb-2 p-1`}>
+            <p className={`popup__intro`}>
               <strong>Option 1: </strong>
               Run the following commands in your terminal.
             </p>
@@ -190,7 +189,7 @@ const Popup = (): React.ReactElement => {
         )}
         {activeTab === 'PowerShell' && (
           <>
-            <p className={`mb-2 p-1`}>
+            <p className={`popup__intro`}>
               <strong>Option 1: </strong>
               Paste the following text into PowerShell.
             </p>
@@ -198,15 +197,15 @@ const Popup = (): React.ReactElement => {
           </>
         )}
       </div>
-      <div className={`text-xs text-gray-700 dark:text-gray-300`}>
-        <p className={`mb-2 p-1`}>
+      <div className={`popup__section`}>
+        <p className={`popup__intro`}>
           <strong>Option 2: </strong>
           Paste the following text into your AWS credentials file.
         </p>
         <CodeSnippet code={iniSnippet(credentials)} ready={ready} />
       </div>
       {ready && (
-        <div className={`text-xs text-gray-700 dark:text-gray-300`}>
+        <div className={`popup__expiry`}>
           <Expiry time={credentials._expiry} />
         </div>
       )}

@@ -2,36 +2,40 @@
 
 exports[`Popup platform is configured to display macOS and Linux by default 1`] = `
 <div
-  class="bg-gray-100 p-2 dark:bg-gray-900"
+  class="popup"
   id="popup"
 >
   <nav
-    class="mb-2 flex space-x-4"
+    aria-label="Platform selection"
+    class="popup__tabs"
   >
-    <a
-      class="bg-gray-200 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-md px-3 py-2 text-sm font-medium"
-      href="#"
+    <button
+      aria-pressed="true"
+      class="popup__tab popup__tab--active"
+      type="button"
     >
       macOS and Linux
-    </a>
-    <a
-      class="text-gray-500 hover:bg-gray-200 hover:text-gray-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200 rounded-md px-3 py-2 text-sm font-medium"
-      href="#"
+    </button>
+    <button
+      aria-pressed="false"
+      class="popup__tab"
+      type="button"
     >
       Windows
-    </a>
-    <a
-      class="text-gray-500 hover:bg-gray-200 hover:text-gray-600 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-200 rounded-md px-3 py-2 text-sm font-medium"
-      href="#"
+    </button>
+    <button
+      aria-pressed="false"
+      class="popup__tab"
+      type="button"
     >
       PowerShell
-    </a>
+    </button>
   </nav>
   <div
-    class="text-xs text-gray-700 dark:text-gray-300"
+    class="popup__section"
   >
     <p
-      class="mb-2 p-1"
+      class="popup__intro"
     >
       <strong>
         Option 1: 
@@ -39,13 +43,13 @@ exports[`Popup platform is configured to display macOS and Linux by default 1`] 
       Run the following commands in your terminal.
     </p>
     <div
-      class="group relative mb-2 "
+      class="code-snippet "
     >
       <pre
-        class="relative overflow-x-scroll rounded-md border border-gray-300 bg-gray-200 p-2 leading-5 dark:border-gray-700 dark:bg-gray-800"
+        class="code-snippet__pre"
       >
         <span
-          class="font-sans text-gray-500 dark:text-gray-300"
+          class="code-snippet__placeholder"
         >
           Sign-in to AWS to see credentials...
         </span>
@@ -53,10 +57,10 @@ exports[`Popup platform is configured to display macOS and Linux by default 1`] 
     </div>
   </div>
   <div
-    class="text-xs text-gray-700 dark:text-gray-300"
+    class="popup__section"
   >
     <p
-      class="mb-2 p-1"
+      class="popup__intro"
     >
       <strong>
         Option 2: 
@@ -64,13 +68,13 @@ exports[`Popup platform is configured to display macOS and Linux by default 1`] 
       Paste the following text into your AWS credentials file.
     </p>
     <div
-      class="group relative mb-2 "
+      class="code-snippet "
     >
       <pre
-        class="relative overflow-x-scroll rounded-md border border-gray-300 bg-gray-200 p-2 leading-5 dark:border-gray-700 dark:bg-gray-800"
+        class="code-snippet__pre"
       >
         <span
-          class="font-sans text-gray-500 dark:text-gray-300"
+          class="code-snippet__placeholder"
         >
           Sign-in to AWS to see credentials...
         </span>
