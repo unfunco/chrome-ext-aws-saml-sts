@@ -1,7 +1,7 @@
 # AWS SAML to STS Chrome extension
 
 [![CI](https://github.com/unfunco/chrome-ext-aws-saml-sts/actions/workflows/ci.yaml/badge.svg)](https://github.com/unfunco/chrome-ext-aws-saml-sts/actions/workflows/ci.yaml)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-purple.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 
 [Google Chrome] extension that intercepts the SAML assertion when logging into
 the [AWS] console and exchanges it for temporary [STS] credentials.
@@ -74,15 +74,15 @@ download the latest distribution from the relevant GitHub release.
 ## License
 
 © 2023 [Daniel Morris]\
-Made available under the terms of the [Apache License 2.0].
+Made available under the terms of the [MIT License].
 
-[apache license 2.0]: LICENSE.md
 [aws]: https://aws.amazon.com
 [aws cli]: https://aws.amazon.com/cli/
 [chrome://extensions]: chrome://extensions
 [chrome web store]: https://chromewebstore.google.com/detail/aws-saml-to-sts/affnlpfpepgmjfhclafkknonoocdefnh
 [daniel morris]: https://unfun.co
 [google chrome]: https://www.google.com/chrome
+[mit license]: LICENSE.md
 [node.js]: https://nodejs.org
 [npm]: https://www.npmjs.com
 [sts]: https://docs.aws.amazon.com/STS/latest/APIReference/welcome.html
