@@ -20,7 +20,7 @@
           "type": "chore"
         }
       ],
-      "draft": false,
+      "draft": true,
       "extra-label": "automata 🤖,autorelease: pending,chore 🧹",
       "include-v-in-tag": true,
       "initial-version": "0.1.0",
