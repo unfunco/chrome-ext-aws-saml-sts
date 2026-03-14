@@ -24,6 +24,13 @@ export const removeExpiredCredentials = async (): Promise<void> => {
       `${LOG_PREFIX} Invalid credentials found in local storage.`,
       summary,
     )
+    await Browser.storage.local.remove(CREDENTIALS_STORAGE_KEY)
+    console.log(
+      `${LOG_PREFIX} Removed invalid credentials from local storage.`,
+      {
+        key: CREDENTIALS_STORAGE_KEY,
+      },
+    )
     return
   }
 

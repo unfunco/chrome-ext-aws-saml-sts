@@ -22,7 +22,15 @@ const SAMPLE_SAML_XML = `
 `.trim()
 
 describe('SAML helpers', (): void => {
-  it('can decode a SAML assertion', (): void => {
+  it('can decode a raw base64-encoded SAML assertion', (): void => {
+    const encodedAssertion = Buffer.from(SAMPLE_SAML_XML, 'utf8').toString(
+      'base64',
+    )
+
+    expect(decodeSAMLAssertion(encodedAssertion)).toBe(SAMPLE_SAML_XML)
+  })
+
+  it('can decode a legacy percent-encoded SAML assertion', (): void => {
     const encodedAssertion = Buffer.from(
       encodeURIComponent(SAMPLE_SAML_XML),
       'utf8',
@@ -70,6 +78,14 @@ describe('SAML helpers', (): void => {
     )
   })
 
+  it('can select a role using the posted role ARN', (): void => {
+    const { roles } = parseSAMLAssertion(SAMPLE_SAML_XML)
+
+    expect(selectRole(roles, 'arn:aws:iam::123456789012:role/ReadOnly')).toBe(
+      'arn:aws:iam::123456789012:role/ReadOnly,arn:aws:iam::123456789012:saml-provider/Example',
+    )
+  })
+
   it('can select the only available role when no role index is provided', (): void => {
     const samlXmlWithoutSessionDuration = `
 <Response>
@@ -98,6 +114,17 @@ describe('SAML helpers', (): void => {
     ).toEqual({
       principalArn: 'arn:aws:iam::123456789012:saml-provider/Example',
       roleArn: 'arn:aws:iam::123456789012:role/Admin',
+    })
+  })
+
+  it('can extract role and principal ARNs for non-commercial AWS partitions', (): void => {
+    expect(
+      extractRoleArns(
+        'arn:aws-us-gov:iam::123456789012:role/Admin,arn:aws-us-gov:iam::123456789012:saml-provider/Example',
+      ),
+    ).toEqual({
+      principalArn: 'arn:aws-us-gov:iam::123456789012:saml-provider/Example',
+      roleArn: 'arn:aws-us-gov:iam::123456789012:role/Admin',
     })
   })
 })

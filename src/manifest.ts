@@ -10,7 +10,6 @@ export const manifest: Manifest.WebExtensionManifest = {
     service_worker: 'src/bg/index.ts',
     type: 'module',
   },
-  default_locale: 'en',
   description: pkg.description,
   host_permissions: ['https://signin.aws.amazon.com/saml'],
   icons: {
