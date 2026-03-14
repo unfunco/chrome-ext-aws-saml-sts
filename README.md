@@ -38,7 +38,7 @@ following instructions.
 #### Requirements
 
 - [Google Chrome]
-- [Node.js] 20 and [npm] 9+
+- [Node.js] 24 and [npm] 10+
 
 Clone the repository and navigate to the `chrome-ext-aws-saml-sts` directory,
 and install dependencies with [npm]. This will take a minute or two.

@@ -26,7 +26,7 @@ const Expiry = ({ time }: ExpiryProps): React.ReactElement => {
   const expiryTime = new Date(time)
 
   return (
-    <p className={`text-center text-xs text-gray-500 dark:text-gray-300`}>
+    <p className={`expiry`}>
       Credentials expire{' '}
       <time dateTime={expiryTime.toISOString()}>
         {getRelativeTime(expiryTime)}

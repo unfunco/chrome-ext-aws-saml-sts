@@ -91,13 +91,34 @@ describe('CodeSnippet', (): void => {
 
       expect(getRenderedElement()).toMatchSnapshot()
       expect((getRenderedElement() as HTMLElement).className).toContain(
-        'cursor-pointer',
+        'code-snippet--interactive',
       )
       expect(container?.textContent).toContain('Click to copy')
     })
   })
 
   describe('copy confirmation', (): void => {
+    it('does not attempt to copy when credentials are not ready', async (): Promise<void> => {
+      container = document.createElement('div')
+      document.body.appendChild(container)
+      const nextRoot = createRoot(container)
+      root = nextRoot
+
+      await act(async (): Promise<void> => {
+        nextRoot.render(<CodeSnippet code={code} ready={false} />)
+      })
+
+      await act(async (): Promise<void> => {
+        getSnippetElement().dispatchEvent(
+          new MouseEvent('click', { bubbles: true }),
+        )
+
+        await Promise.resolve()
+      })
+
+      expect(clipboardWriteText).not.toHaveBeenCalled()
+    })
+
     it('is shown after copying and clears after the timeout', async (): Promise<void> => {
       await renderComponent()
 

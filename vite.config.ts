@@ -1,7 +1,6 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-import postcssConfig from './postcss.config'
 import { crx, ManifestV3Export } from '@crxjs/vite-plugin'
 import manifest from './src/manifest'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
@@ -24,9 +23,6 @@ export default defineConfig({
         tryCatchDeoptimization: false,
       },
     },
-  },
-  css: {
-    postcss: postcssConfig,
   },
   plugins: [
     react(),
