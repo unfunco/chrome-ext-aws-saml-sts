@@ -148,13 +148,26 @@ const Popup = (): React.ReactElement => {
 
     console.log(`${LOG_PREFIX} Opening popup and loading stored state.`)
 
-    void Browser.storage.local.get('credentials').then((current): void => {
-      updateCredentials(current.credentials, 'initial load')
-    })
+    void Browser.storage.local
+      .get('credentials')
+      .then((current): void => {
+        updateCredentials(current.credentials, 'initial load')
+      })
+      .catch((error: unknown): void => {
+        console.error(`${LOG_PREFIX} Failed to load stored credentials.`, error)
+      })
 
-    void Browser.storage.local.get('platform').then((current): void => {
-      updatePlatform(current.platform, 'initial load')
-    })
+    void Browser.storage.local
+      .get('platform')
+      .then((current): void => {
+        updatePlatform(current.platform, 'initial load')
+      })
+      .catch((error: unknown): void => {
+        console.error(
+          `${LOG_PREFIX} Failed to load platform preference.`,
+          error,
+        )
+      })
 
     Browser.storage.local.onChanged.addListener(handleStorageChange)
     console.log(`${LOG_PREFIX} Registered storage change listener.`)
@@ -166,10 +179,18 @@ const Popup = (): React.ReactElement => {
   }, [])
 
   const handleTabChange = (platform: PlatformName): void => {
-    void Browser.storage.local.set({ platform }).then((): void => {
-      console.log(`${LOG_PREFIX} Updated platform preference.`, { platform })
-      setActiveTab(platform)
-    })
+    void Browser.storage.local
+      .set({ platform })
+      .then((): void => {
+        console.log(`${LOG_PREFIX} Updated platform preference.`, { platform })
+        setActiveTab(platform)
+      })
+      .catch((error: unknown): void => {
+        console.error(`${LOG_PREFIX} Failed to update platform preference.`, {
+          error,
+          platform,
+        })
+      })
   }
 
   return (

@@ -92,7 +92,15 @@ describe('background credential cleanup', (): void => {
         valueType: 'string',
       }),
     )
-    expect(mockRemove).not.toHaveBeenCalled()
+    expect(mockRemove).toHaveBeenCalledWith('credentials')
+    expect(console.log).toHaveBeenCalledWith(
+      expect.stringContaining(
+        'Removed invalid credentials from local storage.',
+      ),
+      expect.objectContaining({
+        key: 'credentials',
+      }),
+    )
   })
 
   it('runs cleanup immediately and on the configured interval', async (): Promise<void> => {

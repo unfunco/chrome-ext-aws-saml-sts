@@ -5,6 +5,7 @@ type CodeSnippetProps = {
   code: string
   ready: boolean
 }
+const LOG_PREFIX = '[AWS SAML to STS][code-snippet]'
 
 const CodeSnippet = ({ code, ready }: CodeSnippetProps): React.ReactElement => {
   const [copied, setCopied] = useState(false)
@@ -15,11 +16,19 @@ const CodeSnippet = ({ code, ready }: CodeSnippetProps): React.ReactElement => {
       return
     }
 
-    navigator.clipboard.writeText(code).then((): void => {
-      setHovering(false)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    })
+    void navigator.clipboard
+      .writeText(code)
+      .then((): void => {
+        setHovering(false)
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      })
+      .catch((error: unknown): void => {
+        console.error(
+          `${LOG_PREFIX} Failed to copy credentials to the clipboard.`,
+          error,
+        )
+      })
   }
 
   return (
