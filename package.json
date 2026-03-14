@@ -4,6 +4,9 @@
     "name": "Daniel Morris",
     "url": "https://unfun.co"
   },
+  "bugs": {
+    "url": "https://github.com/unfunco/chrome-ext-aws-saml-sts/issues"
+  },
   "dependencies": {
     "@aws-sdk/client-sts": "3.1009.0",
     "fast-xml-parser": "5.5.5",
@@ -11,14 +14,13 @@
     "react-dom": "19.2.4",
     "webextension-polyfill": "0.12.0"
   },
-  "description": "Intercepts the SAML assertion when logging into the AWS console and exchanges it for temporary STS credentials.",
+  "description": "Captures AWS SAML sign-ins and turns them into temporary STS credentials for the AWS CLI and SDKs.",
   "devDependencies": {
     "@crxjs/vite-plugin": "2.3.0",
     "@types/jest": "30.0.0",
     "@types/node": "24.12.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
-    "@types/react-test-renderer": "19.1.0",
     "@types/webextension-polyfill": "0.12.5",
     "@typescript-eslint/eslint-plugin": "8.57.0",
     "@typescript-eslint/parser": "8.57.0",
@@ -31,19 +33,30 @@
     "lint-staged": "16.4.0",
     "nodemon": "3.1.14",
     "prettier": "3.8.1",
-    "react-test-renderer": "19.2.4",
     "ts-jest": "29.4.6",
     "ts-node": "10.9.2",
     "typescript": "5.9.3",
-    "vite": "8.0.0",
-    "vite-plugin-static-copy": "3.3.0"
+    "vite": "8.0.0"
   },
   "engines": {
     "node": "24",
     "npm": ">=10"
   },
   "homepage": "https://github.com/unfunco/chrome-ext-aws-saml-sts#readme",
-  "license": "Apache-2.0",
+  "keywords": [
+    "adfs",
+    "aws",
+    "aws-cli",
+    "aws-sdk",
+    "azure-ad",
+    "chrome-extension",
+    "federation",
+    "okta",
+    "saml",
+    "sts",
+    "temporary-credentials"
+  ],
+  "license": "MIT",
   "lint-staged": {
     "*.{css,js,json,jsx,md,ts,tsx}": [
       "prettier --write"
@@ -51,6 +64,10 @@
   },
   "name": "@unfunco/chrome-ext-aws-saml-sts",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unfunco/chrome-ext-aws-saml-sts.git"
+  },
   "scripts": {
     "build": "vite build",
     "dev": "nodemon",
