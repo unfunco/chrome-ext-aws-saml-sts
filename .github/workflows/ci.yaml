@@ -90,3 +90,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       if: ${{ steps.release.outputs.release_created }}
       run: gh release upload ${{ steps.release.outputs.tag_name }} ${{ steps.release.outputs.tag_name }}.zip
+    - name: Publish release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      if: ${{ steps.release.outputs.release_created }}
+      run: gh release edit ${{ steps.release.outputs.tag_name }} --draft=false
