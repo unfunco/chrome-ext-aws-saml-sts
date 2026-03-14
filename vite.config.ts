@@ -14,10 +14,6 @@ export default defineConfig({
     emptyOutDir: true,
     outDir: resolve(__dirname, 'dist'),
     rollupOptions: {
-      input: {
-        bg: resolve(SRC, 'bg', 'index.ts'),
-        popup: resolve(SRC, 'popup', 'index.html'),
-      },
       output: {
         entryFileNames: (chunkInfo): string => `src/${chunkInfo.name}/index.js`,
       },
@@ -41,8 +37,15 @@ export default defineConfig({
   ],
   publicDir: resolve(__dirname, 'public'),
   resolve: {
-    alias: {
-      '@': SRC,
-    },
+    alias: [
+      {
+        find: /^@aws-sdk\/xml-builder$/,
+        replacement: resolve(__dirname, 'src/utilities/aws-sdk-xml-builder.ts'),
+      },
+      {
+        find: '@',
+        replacement: SRC,
+      },
+    ],
   },
 })
