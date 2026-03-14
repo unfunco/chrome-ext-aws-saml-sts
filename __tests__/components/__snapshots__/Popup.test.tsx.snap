@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Popup platform is configured to display macOS and Linux by default 1`] = `
+exports[`Popup platform is configured to display macOS/Linux by default 1`] = `
 <div
   class="popup"
   id="popup"
@@ -14,14 +14,14 @@ exports[`Popup platform is configured to display macOS and Linux by default 1`] 
       class="popup__tab popup__tab--active"
       type="button"
     >
-      macOS and Linux
+      macOS/Linux
     </button>
     <button
       aria-pressed="false"
       class="popup__tab"
       type="button"
     >
-      Windows
+      Windows CMD
     </button>
     <button
       aria-pressed="false"
@@ -37,10 +37,14 @@ exports[`Popup platform is configured to display macOS and Linux by default 1`] 
     <p
       class="popup__intro"
     >
-      <strong>
-        Option 1: 
-      </strong>
-      Run the following commands in your terminal.
+      <span
+        class="popup__intro-label"
+      >
+        Option 1:
+      </span>
+      <span>
+        Run in Terminal
+      </span>
     </p>
     <div
       class="code-snippet "
@@ -62,10 +66,14 @@ exports[`Popup platform is configured to display macOS and Linux by default 1`] 
     <p
       class="popup__intro"
     >
-      <strong>
-        Option 2: 
-      </strong>
-      Paste the following text into your AWS credentials file.
+      <span
+        class="popup__intro-label"
+      >
+        Option 2:
+      </span>
+      <span>
+        Add to AWS credentials file
+      </span>
     </p>
     <div
       class="code-snippet "

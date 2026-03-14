@@ -71,14 +71,35 @@ describe('Popup', (): void => {
   })
 
   describe('platform', (): void => {
-    it('is configured to display macOS and Linux by default', async (): Promise<void> => {
+    it('is configured to display macOS/Linux by default', async (): Promise<void> => {
       await renderComponent()
 
       expect(mockGet).toHaveBeenCalledWith('credentials')
       expect(mockGet).toHaveBeenCalledWith('platform')
       expect(mockAddStorageListener).toHaveBeenCalledTimes(1)
       expect(mockSet).not.toHaveBeenCalled()
+      expect(getRenderedElement().textContent).toContain('Option 1:')
+      expect(getRenderedElement().textContent).toContain('macOS/Linux')
+      expect(getRenderedElement().textContent).toContain('Run in Terminal')
+      expect(getRenderedElement().textContent).toContain('Option 2:')
+      expect(getRenderedElement().textContent).toContain(
+        'Add to AWS credentials file',
+      )
       expect(getRenderedElement()).toMatchSnapshot()
+    })
+
+    it('restores the saved platform selection', async (): Promise<void> => {
+      mockGet.mockImplementation(
+        async (keys): Promise<Record<string, unknown>> =>
+          keys === 'platform' ? { platform: 'PowerShell' } : {},
+      )
+
+      await renderComponent()
+
+      expect(container?.querySelector('.popup__tab--active')?.textContent).toBe(
+        'PowerShell',
+      )
+      expect(getRenderedElement().textContent).toContain('Run in PowerShell')
     })
 
     it('updates when credentials change while the popup is open', async (): Promise<void> => {
