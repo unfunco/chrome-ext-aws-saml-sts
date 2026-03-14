@@ -13,15 +13,33 @@ import { summarizeCredentialValue } from '@/utilities/debug'
 import Browser, { type Storage } from 'webextension-polyfill'
 import Expiry from '@/components/Expiry'
 
-const PLATFORM_NAMES = ['macOS and Linux', 'Windows', 'PowerShell'] as const
-const DEFAULT_PLATFORM = PLATFORM_NAMES[0]
+const PLATFORM_OPTIONS = [
+  {
+    intro: 'Run in Terminal',
+    label: 'macOS/Linux',
+    snippet: unixSnippet,
+    storageValue: 'macOS and Linux',
+  },
+  {
+    intro: 'Run in Command Prompt',
+    label: 'Windows CMD',
+    snippet: windowsSnippet,
+    storageValue: 'Windows',
+  },
+  {
+    intro: 'Run in PowerShell',
+    label: 'PowerShell',
+    snippet: powershellSnippet,
+    storageValue: 'PowerShell',
+  },
+] as const
+const DEFAULT_PLATFORM = PLATFORM_OPTIONS[0].storageValue
 const LOG_PREFIX = '[AWS SAML to STS][popup]'
 
-type PlatformName = (typeof PLATFORM_NAMES)[number]
+type PlatformName = (typeof PLATFORM_OPTIONS)[number]['storageValue']
 
-type Platform = {
+type Platform = (typeof PLATFORM_OPTIONS)[number] & {
   current: boolean
-  name: PlatformName
 }
 
 function classNames(...classes: string[]): string {
@@ -29,14 +47,14 @@ function classNames(...classes: string[]): string {
 }
 
 const buildPlatforms = (activePlatform: PlatformName): Platform[] =>
-  PLATFORM_NAMES.map((name) => ({
-    current: name === activePlatform,
-    name,
+  PLATFORM_OPTIONS.map((platform) => ({
+    ...platform,
+    current: platform.storageValue === activePlatform,
   }))
 
 const isPlatformName = (value: unknown): value is PlatformName =>
   typeof value === 'string' &&
-  PLATFORM_NAMES.some((platform) => platform === value)
+  PLATFORM_OPTIONS.some((platform) => platform.storageValue === value)
 
 const Popup = (): React.ReactElement => {
   const [ready, setReady] = useState<boolean>(false)
@@ -44,6 +62,9 @@ const Popup = (): React.ReactElement => {
     useState<AWSCredentials>(defaultCredentials)
   const [activeTab, setActiveTab] = useState<PlatformName>(DEFAULT_PLATFORM)
   const platforms = buildPlatforms(activeTab)
+  const activePlatform =
+    PLATFORM_OPTIONS.find((platform) => platform.storageValue === activeTab) ??
+    PLATFORM_OPTIONS[0]
 
   useEffect((): (() => void) => {
     const updateCredentials = (
@@ -161,46 +182,24 @@ const Popup = (): React.ReactElement => {
               'popup__tab',
               platform.current ? 'popup__tab--active' : '',
             )}
-            key={platform.name}
-            onClick={(): void => handleTabChange(platform.name)}
+            key={platform.storageValue}
+            onClick={(): void => handleTabChange(platform.storageValue)}
             type={`button`}>
-            {platform.name}
+            {platform.label}
           </button>
         ))}
       </nav>
       <div className={`popup__section`}>
-        {activeTab === 'macOS and Linux' && (
-          <>
-            <p className={`popup__intro`}>
-              <strong>Option 1: </strong>
-              Run the following commands in your terminal.
-            </p>
-            <CodeSnippet code={unixSnippet(credentials)} ready={ready} />
-          </>
-        )}
-        {activeTab === 'Windows' && (
-          <>
-            <p className={`popup__intro`}>
-              <strong>Option 1: </strong>
-              Run the following commands in your terminal.
-            </p>
-            <CodeSnippet code={windowsSnippet(credentials)} ready={ready} />
-          </>
-        )}
-        {activeTab === 'PowerShell' && (
-          <>
-            <p className={`popup__intro`}>
-              <strong>Option 1: </strong>
-              Paste the following text into PowerShell.
-            </p>
-            <CodeSnippet code={powershellSnippet(credentials)} ready={ready} />
-          </>
-        )}
+        <p className={`popup__intro`}>
+          <span className={`popup__intro-label`}>Option 1:</span>
+          <span>{activePlatform.intro}</span>
+        </p>
+        <CodeSnippet code={activePlatform.snippet(credentials)} ready={ready} />
       </div>
       <div className={`popup__section`}>
         <p className={`popup__intro`}>
-          <strong>Option 2: </strong>
-          Paste the following text into your AWS credentials file.
+          <span className={`popup__intro-label`}>Option 2:</span>
+          <span>Add to AWS credentials file</span>
         </p>
         <CodeSnippet code={iniSnippet(credentials)} ready={ready} />
       </div>
