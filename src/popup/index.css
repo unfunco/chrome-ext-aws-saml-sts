@@ -142,16 +142,32 @@ button {
   flex: 0 0 auto;
 }
 
-.popup__expiry {
+.popup__footer {
+  align-items: center;
   color: var(--popup-muted);
+  display: flex;
   font-size: 0.78rem;
   margin-top: 20px;
   padding-top: 0;
 }
 
+.popup__github-link {
+  color: var(--popup-muted);
+  display: flex;
+  margin-left: auto;
+  opacity: 0.6;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+.popup__github-link:hover {
+  color: var(--popup-text);
+  opacity: 1;
+}
+
 .expiry {
   margin: 0;
-  text-align: center;
 }
 
 .expiry time {
