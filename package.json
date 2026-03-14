@@ -13,7 +13,7 @@
   },
   "description": "Intercepts the SAML assertion when logging into the AWS console and exchanges it for temporary STS credentials.",
   "devDependencies": {
-    "@crxjs/vite-plugin": "^1.0.14",
+    "@crxjs/vite-plugin": "2.3.0",
     "@tailwindcss/postcss": "^4.2.1",
     "@types/jest": "30.0.0",
     "@types/node": "24.12.0",
@@ -48,7 +48,7 @@
     "npm": ">=10"
   },
   "homepage": "https://github.com/unfunco/chrome-ext-aws-saml-sts#readme",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "lint-staged": {
     "*.{css,js,json,jsx,md,ts,tsx}": [
       "prettier --write"
