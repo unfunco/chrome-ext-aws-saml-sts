@@ -1,15 +1,30 @@
-import { Storage } from 'webextension-polyfill'
+import type { Storage } from 'webextension-polyfill'
 
-type MockLocalStorageArea = Omit<Storage.LocalStorageArea, 'onChanged'>
+type MockLocalStorageArea = Pick<
+  Storage.StorageArea,
+  'clear' | 'get' | 'getBytesInUse' | 'getKeys' | 'onChanged' | 'remove' | 'set'
+>
+
+const onChanged = {
+  addListener: jest.fn(),
+  hasListener: jest.fn(() => false),
+  removeListener: jest.fn(),
+} satisfies MockLocalStorageArea['onChanged']
+
+const local = {
+  clear: jest.fn(async (): Promise<void> => undefined),
+  get: jest.fn(async (): Promise<Record<string, unknown>> => ({})),
+  getBytesInUse: jest.fn(async (): Promise<number> => 0),
+  getKeys: jest.fn(async (): Promise<string[]> => []),
+  onChanged,
+  set: jest.fn(async (): Promise<void> => undefined),
+  remove: jest.fn(async (): Promise<void> => undefined),
+} satisfies MockLocalStorageArea
 
 const mockBrowser = {
-  local: {
-    QUOTA_BYTES: 5242880,
-    clear: jest.fn(),
-    get: jest.fn(),
-    set: jest.fn(),
-    remove: jest.fn(),
-  } as MockLocalStorageArea,
+  storage: {
+    local,
+  },
 }
 
 export default mockBrowser
