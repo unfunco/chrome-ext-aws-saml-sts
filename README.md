@@ -3,11 +3,11 @@
 [![CI](https://github.com/unfunco/chrome-ext-aws-saml-sts/actions/workflows/ci.yaml/badge.svg)](https://github.com/unfunco/chrome-ext-aws-saml-sts/actions/workflows/ci.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 
-A [Google Chrome] extension for engineers who authenticate to [AWS] with
-SAML 2.0 and want temporary [STS] credentials they can copy into the
-[AWS CLI] or AWS SDK tooling.
+<img align="right" src="https://github.com/user-attachments/assets/fbd0ae04-0d48-4cdd-8bcd-c9c5537c3950" alt="Screenshot of the AWS SAML to STS Chrome extension being used to generate temporary credentials." style="max-width: 100%;" width="300">
 
-<img align="right" width="400" height="329" src="docs/images/click-to-copy.png" alt="Screenshot of the AWS SAML to STS Chrome extension being used to generate temporary credentials.">
+A Google Chrome extension for engineers who authenticate to AWS with
+SAML 2.0 and want temporary STS credentials they can copy into the
+AWS CLI or AWS SDK tooling.
 
 When you sign in to the AWS console through a SAML identity provider such as
 Okta, Azure AD, or ADFS, AWS receives a SAML assertion at
@@ -15,7 +15,7 @@ Okta, Azure AD, or ADFS, AWS receives a SAML assertion at
 extracts the IAM role details, exchanges the assertion for temporary AWS STS
 credentials, and makes the credentials available in copy-friendly formats.
 
-## Why this exists
+## Why does this exist?
 
 Federated AWS access often works well in the browser but leaves a gap for local
 developer workflows. If your organisation uses SAML sign-in for the AWS
@@ -23,7 +23,7 @@ console, getting short-lived credentials into the CLI or SDKs can still be
 awkward. This extension closes that gap without adding another service or
 credential broker.
 
-## How the extension works
+## How does the extension work?
 
 1. It listens only for requests to `https://signin.aws.amazon.com/saml`.
 2. It reads the posted `SAMLResponse` from the AWS sign-in form submission.
