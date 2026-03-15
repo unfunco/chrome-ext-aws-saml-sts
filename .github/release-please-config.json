@@ -6,17 +6,17 @@
       "changelog-sections": [
         {
           "hidden": false,
-          "section": "New features",
+          "section": "🎉 New features",
           "type": "feat"
         },
         {
           "hidden": false,
-          "section": "Bug fixes",
+          "section": "🐛 Bug fixes",
           "type": "fix"
         },
         {
           "hidden": false,
-          "section": "Miscellaneous",
+          "section": "🧹 Miscellaneous",
           "type": "chore"
         }
       ],
