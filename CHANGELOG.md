@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.6.0](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.5.0...chrome-ext-aws-saml-sts-v0.6.0) (2026-03-15)
+
+
+### 🎉 New features
+
+* Add a link to the GitHub repository ([#240](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/240)) ([e0a2dd5](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/e0a2dd51127205ddd88af80dc76ca18a3a435248))
+
+
+### 🐛 Bug fixes
+
+* Attach artifacts to releases ([#239](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/239)) ([1bf2a05](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/1bf2a0574224b4e60b179f34585e25a89ccb5a6f))
+* Improve spacing between options and expiry ([#237](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/237)) ([87e3988](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/87e3988892b94414ddd4c6e97823553032b9215f))
+
+
+### 🧹 Miscellaneous
+
+* Add emoji to headings in release notes ([#242](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/242)) ([e19bee4](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/e19bee432b9ae45729e4b0e4a50a329c36585b10))
+* Update the README extension screenshot ([#241](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/241)) ([ded0cff](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/ded0cff8abf7e7ed7afb13110f38a8aab3025a3e))
+
 ## [0.5.0](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.4.2...chrome-ext-aws-saml-sts-v0.5.0) (2026-03-14)
 
 
