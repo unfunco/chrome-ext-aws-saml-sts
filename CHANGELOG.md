@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.6.0...chrome-ext-aws-saml-sts-v0.6.1) (2026-03-18)
+
+
+### 🧹 Miscellaneous
+
+* Bump fast-xml-parser from 5.5.5 to 5.5.6 ([#244](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/244)) ([e15d042](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/e15d04280bad203abbd21898f95fe5bc41f76e0a))
+
 ## [0.6.0](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.5.0...chrome-ext-aws-saml-sts-v0.6.0) (2026-03-15)
 
 
