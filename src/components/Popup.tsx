@@ -234,6 +234,7 @@ const Popup = (): React.ReactElement => {
           rel="noopener noreferrer"
           target="_blank">
           <GitHubIcon />
+          View source
         </a>
       </footer>
     </div>

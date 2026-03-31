@@ -152,10 +152,14 @@ button {
 }
 
 .popup__github-link {
+  align-items: center;
   color: var(--popup-muted);
   display: flex;
+  font-size: 0.75rem;
+  gap: 0.25rem;
   margin-left: auto;
   opacity: 0.6;
+  text-decoration: none;
   transition:
     opacity 0.2s ease,
     color 0.2s ease;
