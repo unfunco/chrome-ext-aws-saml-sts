@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.7.0](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.6.1...chrome-ext-aws-saml-sts-v0.7.0) (2026-03-31)
+
+
+### 🎉 New features
+
+* Add view source text next to GitHub icon ([#253](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/253)) ([695396c](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/695396cd34bc40e482776385373adb36bfa5a059))
+
+
+### 🧹 Miscellaneous
+
+* Bump @aws-sdk/client-sts from 3.1009.0 to 3.1014.0 ([#252](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/252)) ([28b3e97](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/28b3e97d183975946c349e6bcab778f6059f8a57))
+* Bump @crxjs/vite-plugin from 2.3.0 to 2.4.0 ([#249](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/249)) ([6c6a9dc](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/6c6a9dc0b320ffe59972d50d6b1b247c818c35d3))
+* Bump @typescript-eslint/parser from 8.57.0 to 8.57.1 ([#248](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/248)) ([aaf6207](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/aaf6207097296c65c3a57376e772db39515a5aea))
+* Bump eslint from 10.0.3 to 10.1.0 ([#250](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/250)) ([a7155eb](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/a7155eb16d56c331f1e6e89b3986316a7e122290))
+* Bump fast-xml-parser and @aws-sdk/xml-builder ([#247](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/247)) ([5504a68](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/5504a68cdf1befe9dd2eab4c2871b72547ff40b3))
+* Bump vite from 8.0.0 to 8.0.1 ([#251](https://github.com/unfunco/chrome-ext-aws-saml-sts/issues/251)) ([1495859](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/1495859b84f48e90f330e52dea0766898eb0eec1))
+* Upgrade vulnerable dependencies ([84ba190](https://github.com/unfunco/chrome-ext-aws-saml-sts/commit/84ba190da2f236675d0b9937a36435e4a2362330))
+
 ## [0.6.1](https://github.com/unfunco/chrome-ext-aws-saml-sts/compare/chrome-ext-aws-saml-sts-v0.6.0...chrome-ext-aws-saml-sts-v0.6.1) (2026-03-18)
 
 
