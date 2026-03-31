@@ -16,7 +16,7 @@
   },
   "description": "Captures AWS SAML sign-ins and turns them into temporary STS credentials for the AWS CLI and SDKs.",
   "devDependencies": {
-    "@crxjs/vite-plugin": "2.4.0",
+    "@crxjs/vite-plugin": "^1.0.14",
     "@types/jest": "30.0.0",
     "@types/node": "24.12.0",
     "@types/react": "19.2.14",
