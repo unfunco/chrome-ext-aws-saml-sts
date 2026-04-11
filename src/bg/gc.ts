@@ -1,9 +1,9 @@
-import Browser from 'webextension-polyfill'
 import {
   summarizeCredentials,
   summarizeCredentialValue,
 } from '@/utilities/debug'
 import { isAWSCredentials } from '@/utilities/snippets'
+import Browser from 'webextension-polyfill'
 
 const CREDENTIALS_STORAGE_KEY = 'credentials'
 export const DEFAULT_GC_INTERVAL = 30_000

@@ -1,4 +1,4 @@
-import { type AWSCredentials, isAWSCredentials } from '@/utilities/snippets'
+import { isAWSCredentials, type AWSCredentials } from '@/utilities/snippets'
 
 const formatTimestamp = (value: number): string => new Date(value).toISOString()
 

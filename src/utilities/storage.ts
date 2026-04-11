@@ -1,5 +1,5 @@
-import { type AWSCredentials } from '@/utilities/snippets'
 import { summarizeCredentials } from '@/utilities/debug'
+import { type AWSCredentials } from '@/utilities/snippets'
 import Browser from 'webextension-polyfill'
 
 const LOG_PREFIX = '[AWS SAML to STS][storage]'

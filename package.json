@@ -17,6 +17,7 @@
   "description": "Captures AWS SAML sign-ins and turns them into temporary STS credentials for the AWS CLI and SDKs.",
   "devDependencies": {
     "@crxjs/vite-plugin": "2.4.0",
+    "@ianvs/prettier-plugin-sort-imports": "4.7.1",
     "@types/jest": "30.0.0",
     "@types/node": "24.12.2",
     "@types/react": "19.2.14",
@@ -24,6 +25,7 @@
     "@types/webextension-polyfill": "0.12.5",
     "@typescript-eslint/eslint-plugin": "8.58.1",
     "@typescript-eslint/parser": "8.58.1",
+    "@unfunco/prettier-plugin-yaml": "0.2.0",
     "@vitejs/plugin-react-swc": "4.3.0",
     "eslint": "10.2.0",
     "eslint-config-prettier": "10.1.8",

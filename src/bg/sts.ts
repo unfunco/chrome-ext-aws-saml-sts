@@ -1,6 +1,6 @@
-import { STS, type AssumeRoleWithSAMLCommandOutput } from '@aws-sdk/client-sts'
 import { summarizeCredentials } from '@/utilities/debug'
 import type { AWSCredentials } from '@/utilities/snippets'
+import { STS, type AssumeRoleWithSAMLCommandOutput } from '@aws-sdk/client-sts'
 
 export type AssumeRoleWithSAMLRequest = {
   principalArn: string

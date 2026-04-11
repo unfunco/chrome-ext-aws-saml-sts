@@ -1,7 +1,7 @@
-import type { WebRequest } from 'webextension-polyfill'
 import { handleBeforeRequestEvent } from '@/bg/event'
 import { assumeRoleWithSAML } from '@/bg/sts'
 import { saveCredentials } from '@/utilities/storage'
+import type { WebRequest } from 'webextension-polyfill'
 
 jest.mock('@/bg/sts', () => ({
   assumeRoleWithSAML: jest.fn(),

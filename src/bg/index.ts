@@ -1,6 +1,6 @@
-import Browser from 'webextension-polyfill'
 import { onBeforeRequestEvent } from '@/bg/event'
 import { startCredentialGarbageCollector } from '@/bg/gc'
+import Browser from 'webextension-polyfill'
 
 const AWS_SIGNIN_URL_SAML = 'https://signin.aws.amazon.com/saml'
 const LOG_PREFIX = '[AWS SAML to STS][background]'

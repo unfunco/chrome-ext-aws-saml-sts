@@ -1,8 +1,8 @@
-import Browser from 'webextension-polyfill'
 import {
   removeExpiredCredentials,
   startCredentialGarbageCollector,
 } from '@/bg/gc'
+import Browser from 'webextension-polyfill'
 
 const flushMicrotasks = async (): Promise<void> => {
   await Promise.resolve()

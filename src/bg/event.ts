@@ -1,13 +1,13 @@
-import type { WebRequest } from 'webextension-polyfill'
-import { assumeRoleWithSAML } from '@/bg/sts'
 import {
   decodeSAMLAssertion,
   extractRoleArns,
   parseSAMLAssertion,
   selectRole,
 } from '@/bg/saml'
+import { assumeRoleWithSAML } from '@/bg/sts'
 import { summarizeCredentials } from '@/utilities/debug'
 import { saveCredentials } from '@/utilities/storage'
+import type { WebRequest } from 'webextension-polyfill'
 
 type RequestFormData = Record<string, string | string[] | undefined>
 const LOG_PREFIX = '[AWS SAML to STS][webRequest]'

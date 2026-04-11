@@ -1,10 +1,10 @@
 /** @jest-environment jsdom */
 
-import * as React from 'react'
 import Popup from '@/components/Popup'
-import Browser from 'webextension-polyfill'
+import * as React from 'react'
 import { act } from 'react'
 import { createRoot, type Root } from 'react-dom/client'
+import Browser from 'webextension-polyfill'
 
 Object.assign(globalThis, { IS_REACT_ACT_ENVIRONMENT: true })
 

@@ -1,9 +1,9 @@
 import {
-  type AWSCredentials,
   iniSnippet,
   powershellSnippet,
   unixSnippet,
   windowsSnippet,
+  type AWSCredentials,
 } from '@/utilities'
 
 describe('Utilities', (): void => {
