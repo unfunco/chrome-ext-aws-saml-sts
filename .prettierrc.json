@@ -18,6 +18,7 @@
   "tabWidth": 2,
   "trailingComma": "all",
   "useTabs": false,
-  "yamlFlowCollectionSpacing": true,
-  "yamlIndentSequenceValues": false
+  "yamlIndentSequenceValue": false,
+  "yamlSpacesWithinBraces": true,
+  "yamlSpacesWithinBrackets": true
 }
