@@ -25,7 +25,7 @@
     "@types/webextension-polyfill": "0.12.5",
     "@typescript-eslint/eslint-plugin": "8.58.1",
     "@typescript-eslint/parser": "8.58.1",
-    "@unfunco/prettier-plugin-yaml": "0.2.0",
+    "@unfunco/prettier-plugin-yaml": "0.3.1",
     "@vitejs/plugin-react-swc": "4.3.0",
     "eslint": "10.2.0",
     "eslint-config-prettier": "10.1.8",
