@@ -1,7 +1,7 @@
 import { resolve } from 'node:path'
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
 import { crx, ManifestV3Export } from '@crxjs/vite-plugin'
+import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from 'vite'
 import manifest from './src/manifest'
 
 const SRC = resolve(__dirname, 'src')

@@ -1,5 +1,5 @@
-import React from 'react'
 import { getRelativeTime } from '@/utilities'
+import React from 'react'
 
 type ExpiryProps = {
   /**

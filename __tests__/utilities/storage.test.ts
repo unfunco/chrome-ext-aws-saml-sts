@@ -1,6 +1,6 @@
-import Browser from 'webextension-polyfill'
 import { type AWSCredentials } from '@/utilities'
 import { saveCredentials } from '@/utilities/storage'
+import Browser from 'webextension-polyfill'
 
 describe('Utilities', (): void => {
   const mockSet = Browser.storage.local.set as jest.MockedFunction<

@@ -1,3 +1,5 @@
+import { parseXML } from '@/utilities/aws-sdk-xml-builder'
+
 jest.mock('@aws-sdk/xml-builder/dist-es/XmlNode.js', () => ({
   XmlNode: class XmlNode {},
 }))
@@ -5,8 +7,6 @@ jest.mock('@aws-sdk/xml-builder/dist-es/XmlNode.js', () => ({
 jest.mock('@aws-sdk/xml-builder/dist-es/XmlText.js', () => ({
   XmlText: class XmlText {},
 }))
-
-import { parseXML } from '@/utilities/aws-sdk-xml-builder'
 
 describe('AWS SDK XML builder shim', (): void => {
   it('parses AWS STS XML without DOMParser', (): void => {

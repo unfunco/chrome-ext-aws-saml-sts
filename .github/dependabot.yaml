@@ -7,7 +7,7 @@ updates:
     prefix-development: chore
   cooldown:
     default-days: 7
-  directory: "/"
+  directory: '/'
   labels:
   - chore 🧹
   - workflows 👷‍♀️
@@ -24,7 +24,7 @@ updates:
     prefix-development: chore
   cooldown:
     default-days: 7
-  directory: "/"
+  directory: '/'
   labels:
   - chore 🧹
   pull-request-branch-name:

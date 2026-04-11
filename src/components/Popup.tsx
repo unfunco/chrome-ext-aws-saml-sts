@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react'
 import CodeSnippet from '@/components/CodeSnippet'
+import Expiry from '@/components/Expiry'
+import GitHubIcon from '@/components/GitHubIcon'
 import {
-  type AWSCredentials,
   defaultCredentials,
   iniSnippet,
   isAWSCredentials,
   powershellSnippet,
   unixSnippet,
   windowsSnippet,
+  type AWSCredentials,
 } from '@/utilities'
 import { summarizeCredentialValue } from '@/utilities/debug'
+import React, { useEffect, useState } from 'react'
 import Browser, { type Storage } from 'webextension-polyfill'
-import Expiry from '@/components/Expiry'
-import GitHubIcon from '@/components/GitHubIcon'
 
 const PLATFORM_OPTIONS = [
   {
