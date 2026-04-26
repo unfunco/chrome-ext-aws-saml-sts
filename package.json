@@ -27,7 +27,7 @@
     "@typescript-eslint/parser": "8.58.1",
     "@unfunco/prettier-plugin-yaml": "0.3.1",
     "@vitejs/plugin-react-swc": "4.3.0",
-    "eslint": "10.2.0",
+    "eslint": "10.2.1",
     "eslint-config-prettier": "10.1.8",
     "husky": "9.1.7",
     "jest": "30.3.0",
