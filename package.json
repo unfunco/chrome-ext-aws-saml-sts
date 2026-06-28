@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-sts": "3.1047.0",
-    "fast-xml-parser": "5.8.0",
+    "fast-xml-parser": "5.9.3",
     "react": "19.2.5",
     "react-dom": "19.2.5",
     "webextension-polyfill": "0.12.0"
