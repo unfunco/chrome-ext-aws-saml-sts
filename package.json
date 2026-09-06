@@ -23,7 +23,7 @@
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
     "@types/webextension-polyfill": "0.12.5",
-    "@typescript-eslint/eslint-plugin": "8.67.0",
+    "@typescript-eslint/eslint-plugin": "8.68.0",
     "@typescript-eslint/parser": "8.67.0",
     "@unfunco/prettier-plugin-yaml": "0.4.0",
     "@vitejs/plugin-react-swc": "4.3.1",
