@@ -3,6 +3,9 @@
 [![CI](https://github.com/unfunco/chrome-ext-aws-saml-sts/actions/workflows/ci.yaml/badge.svg)](https://github.com/unfunco/chrome-ext-aws-saml-sts/actions/workflows/ci.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 
+> [!NOTE]
+> I no longer use this extension, so it won't receive further development. Use `aws sso login` or `aws login` instead.
+
 <img align="right" src="https://github.com/user-attachments/assets/fbd0ae04-0d48-4cdd-8bcd-c9c5537c3950" alt="Screenshot of the AWS SAML to STS Chrome extension being used to generate temporary credentials." style="max-width: 100%;" width="300">
 
 A Google Chrome extension for engineers who authenticate to AWS with
